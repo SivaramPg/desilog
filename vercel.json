@@ -1,15 +1,16 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/i/avatars/:id/:width",
+      "source": "/i/avatars/:id/:width?*",
       "destination": "/i/avatars/:id?width=:width"
     },
     {
-      "source": "/i/characters/:id/:width",
+      "source": "/i/characters/:id/:width?*",
       "destination": "/i/characters/:id?width=:width"
     },
     {
-      "source": "/i/characters-bw/:id/:width",
+      "source": "/i/characters-bw/:id/:width?*",
       "destination": "/i/characters-monochrome/:id?width=:width"
     }
   ]
