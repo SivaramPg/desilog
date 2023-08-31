@@ -18,7 +18,9 @@ export async function GET(
       width: searchParamsObj.width,
     })
 
-    const imgBuffer = await sharp(path.resolve(`./public/avatars/${id}.png`))
+    const imgBuffer = await sharp(
+      path.resolve(`./public/optimised/avatars/${id}.png`)
+    )
       .resize(width)
       .png({ quality: 85 })
       .toBuffer()
@@ -37,6 +39,7 @@ export async function GET(
       },
     })
   } catch (error) {
+    console.log(error)
     return new NextResponse('invalid params', { status: 400 })
   }
 }

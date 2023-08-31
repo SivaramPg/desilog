@@ -18,7 +18,9 @@ export async function GET(
       width: searchParamsObj.width,
     })
 
-    const imgBuffer = await sharp(path.resolve(`./public/characters/${id}.png`))
+    const imgBuffer = await sharp(
+      path.resolve(`./public/optimised/characters/${id}.png`)
+    )
       .resize(width)
       .png({ quality: 85 })
       .toBuffer()
