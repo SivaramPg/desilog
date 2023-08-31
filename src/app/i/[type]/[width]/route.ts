@@ -4,12 +4,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import sharp from 'sharp'
 
-import { CHARACTERS_MONOCHROME_COUNT } from '@/constants'
+import { AVATARS_COUNT } from '@/constants'
 
-const CharactersMonochromeSchema = z
+const AvatarsSchema = z
   .object({
-    id: z.coerce.number().int().positive().max(CHARACTERS_MONOCHROME_COUNT),
-    width: z.coerce.number().int().positive().max(2000),
+    id: z.coerce.number().int().positive().max(AVATARS_COUNT),
+    width: z.coerce.number().int().positive().max(1000),
   })
   .strict()
 
@@ -22,14 +22,12 @@ export async function GET(
       request.nextUrl.searchParams.entries()
     )
 
-    const { id, width } = await CharactersMonochromeSchema.parseAsync({
+    const { id, width } = await AvatarsSchema.parseAsync({
       id: params.id,
       width: searchParamsObj.width,
     })
 
-    const imgBuffer = await sharp(
-      path.resolve(`./public/characters-monochrome/${id}.png`)
-    )
+    const imgBuffer = await sharp(path.resolve(`./public/avatars/${id}.png`))
       .resize(width)
       .png({ quality: 85 })
       .toBuffer()
@@ -38,7 +36,7 @@ export async function GET(
       headers: {
         'Content-Type': 'image/png',
         'Content-Length': imgBuffer.length.toString(),
-        'Content-Disposition': `inline; filename="characters-monochrome-${id}-${width}x${width}.png"`,
+        'Content-Disposition': `inline; filename="avatar-${id}-${width}x${width}.png"`,
         'Cache-Control':
           'public, max-age=2592000, stale-while-revalidate=60, stale-if-error=43200, immutable',
         'CDN-Cache-Control':

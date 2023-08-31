@@ -2,7 +2,7 @@ import path from 'path'
 import { NextRequest, NextResponse } from 'next/server'
 import sharp from 'sharp'
 
-import { AvatarsSchema } from '@/schemas/AvatarSchema'
+import { CharactersBWSchema } from '@/schemas/CharactersBWSchema'
 
 export async function GET(
   request: NextRequest,
@@ -13,12 +13,14 @@ export async function GET(
       request.nextUrl.searchParams.entries()
     )
 
-    const { id, width } = await AvatarsSchema.parseAsync({
+    const { id, width } = await CharactersBWSchema.parseAsync({
       id: params.id,
       width: searchParamsObj.width,
     })
 
-    const imgBuffer = await sharp(path.resolve(`./public/avatars/${id}.png`))
+    const imgBuffer = await sharp(
+      path.resolve(`./public/characters-bw/${id}.png`)
+    )
       .resize(width)
       .png({ quality: 85 })
       .toBuffer()
@@ -27,7 +29,7 @@ export async function GET(
       headers: {
         'Content-Type': 'image/png',
         'Content-Length': imgBuffer.length.toString(),
-        'Content-Disposition': `inline; filename="avatar-${id}-${width}x${width}.png"`,
+        'Content-Disposition': `inline; filename="characters-bw-${id}-${width}x${width}.png"`,
         'Cache-Control':
           'public, max-age=2592000, stale-while-revalidate=60, stale-if-error=43200, immutable',
         'CDN-Cache-Control':

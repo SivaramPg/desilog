@@ -1,17 +1,8 @@
 import path from 'path'
-
 import { NextRequest, NextResponse } from 'next/server'
-import { z } from 'zod'
 import sharp from 'sharp'
 
-import { CHARACTERS_COUNT } from '@/constants'
-
-const CharactersSchema = z
-  .object({
-    id: z.coerce.number().int().positive().max(CHARACTERS_COUNT),
-    width: z.coerce.number().int().positive().max(2000),
-  })
-  .strict()
+import { CharactersSchema } from '@/schemas/CharactersSchema'
 
 export async function GET(
   request: NextRequest,

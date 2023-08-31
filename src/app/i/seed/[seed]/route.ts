@@ -1,8 +1,17 @@
 import path from 'path'
+
 import { NextRequest, NextResponse } from 'next/server'
+import { z } from 'zod'
 import sharp from 'sharp'
 
-import { AvatarsSchema } from '@/schemas/AvatarSchema'
+import { AVATARS_COUNT } from '@/constants'
+
+const AvatarsSchema = z
+  .object({
+    id: z.coerce.number().int().positive().max(AVATARS_COUNT),
+    width: z.coerce.number().int().positive().max(1000),
+  })
+  .strict()
 
 export async function GET(
   request: NextRequest,

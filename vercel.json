@@ -10,7 +10,7 @@
     },
     {
       "source": "/i/characters-bw/:id/:width",
-      "destination": "/i/characters-monochrome/:id/?width=:width"
+      "destination": "/i/characters-bw/:id/?width=:width"
     }
   ]
 }

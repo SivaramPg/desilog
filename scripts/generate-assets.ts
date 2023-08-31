@@ -4,24 +4,21 @@ import sharp from 'sharp'
 
 const fsPromises = fs.promises
 
-const avatarsDir = path.resolve(__dirname, '../src/assets/desilog/avatars')
-const charactersDir = path.resolve(
+const avatarsDir = path.resolve(__dirname, '../public/desilog/avatars')
+const charactersDir = path.resolve(__dirname, '..public/desilog/characters')
+const charactersBWDir = path.resolve(
   __dirname,
-  '../src/assets/desilog/characters'
-)
-const charactersMonochromeDir = path.resolve(
-  __dirname,
-  '../src/assets/desilog/characters-monochrome'
+  '..public/desilog/characters-bw'
 )
 
-const publicDir = path.resolve(__dirname, '../public')
+const publicDir = path.resolve(__dirname, '../public/optimised')
 
 const main = async () => {
   try {
-    const [avatars, characters, charactersMonochrome] = await Promise.all([
+    const [avatars, characters, charactersBW] = await Promise.all([
       fsPromises.readdir(avatarsDir),
       fsPromises.readdir(charactersDir),
-      fsPromises.readdir(charactersMonochromeDir),
+      fsPromises.readdir(charactersBWDir),
     ])
 
     if (!fs.existsSync(path.resolve(publicDir, './avatars'))) {
@@ -60,15 +57,15 @@ const main = async () => {
       count2++
     }
 
-    if (!fs.existsSync(path.resolve(publicDir, './characters-monochrome'))) {
-      await fsPromises.mkdir(path.resolve(publicDir, './characters-monochrome'))
+    if (!fs.existsSync(path.resolve(publicDir, './characters-bw'))) {
+      await fsPromises.mkdir(path.resolve(publicDir, './characters-bw'))
     }
 
     let count3 = 1
-    for (let characterMonochrome of charactersMonochrome) {
-      if (!characterMonochrome.includes('.png')) continue
+    for (let characterBW of charactersBW) {
+      if (!characterBW.includes('.png')) continue
       const buffer = await fsPromises.readFile(
-        path.resolve(charactersMonochromeDir, characterMonochrome)
+        path.resolve(charactersBWDir, characterBW)
       )
       await sharp(buffer)
         .resize(2000, 2000, {
@@ -76,7 +73,7 @@ const main = async () => {
           background: { r: 0, g: 0, b: 0, alpha: 0 },
         })
         .png({ quality: 85 })
-        .toFile(path.resolve(publicDir, `characters-monochrome/${count3}.png`))
+        .toFile(path.resolve(publicDir, `characters-bw/${count3}.png`))
       count3++
     }
   } catch (error) {
