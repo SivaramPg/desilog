@@ -23,8 +23,8 @@ export async function GET(
     )
 
     const { id, width } = await CharactersMonochromeSchema.parseAsync({
-      ...params,
-      ...searchParamsObj,
+      id: params.id,
+      width: searchParamsObj.width,
     })
 
     const imgBuffer = await sharp(

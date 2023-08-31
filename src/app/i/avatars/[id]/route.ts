@@ -23,8 +23,8 @@ export async function GET(
     )
 
     const { id, width } = await AvatarsSchema.parseAsync({
-      ...params,
-      ...searchParamsObj,
+      id: params.id,
+      width: searchParamsObj.width,
     })
 
     const imgBuffer = await sharp(path.resolve(`./public/avatars/${id}.png`))
