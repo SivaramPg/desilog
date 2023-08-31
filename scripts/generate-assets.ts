@@ -33,8 +33,8 @@ const main = async () => {
       if (!avatar.includes('.png')) continue
       const buffer = await fsPromises.readFile(path.resolve(avatarsDir, avatar))
       await sharp(buffer)
-        .resize(1000)
-        .png({ quality: 80 })
+        .resize(1000, 1000)
+        .png({ quality: 85 })
         .toFile(path.resolve(publicDir, `avatars/${count1}.png`))
       count1++
     }
@@ -50,8 +50,12 @@ const main = async () => {
         path.resolve(charactersDir, character)
       )
       await sharp(buffer)
-        .resize(1000)
-        .png({ quality: 80 })
+        .resize(2000, 2000, {
+          fit: 'contain',
+          background: { r: 0, g: 0, b: 0, alpha: 0 },
+        })
+
+        .png({ quality: 85 })
         .toFile(path.resolve(publicDir, `characters/${count2}.png`))
       count2++
     }
@@ -67,8 +71,11 @@ const main = async () => {
         path.resolve(charactersMonochromeDir, characterMonochrome)
       )
       await sharp(buffer)
-        .resize(1000)
-        .png({ quality: 80 })
+        .resize(2000, 2000, {
+          fit: 'contain',
+          background: { r: 0, g: 0, b: 0, alpha: 0 },
+        })
+        .png({ quality: 85 })
         .toFile(path.resolve(publicDir, `characters-monochrome/${count3}.png`))
       count3++
     }
