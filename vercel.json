@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/i/avatars/:id/:width",
+      "destination": "/i/avatars/:id"
+    },
+    {
+      "source": "/i/characters/:id/:width",
+      "destination": "/i/characters/:id"
+    },
+    {
+      "source": "/i/characters-bw/:id/:width",
+      "destination": "/i/characters-monochrome/:id"
+    }
+  ]
+}
