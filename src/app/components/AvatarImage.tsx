@@ -1,6 +1,6 @@
 'use client'
 
-import clsx from 'clsx'
+import { twMerge as cn } from 'tailwind-merge'
 import Image from 'next/image'
 
 const shimmer = (w: number, h: number) => `
@@ -38,12 +38,7 @@ export function AvatarImage({
         src={url}
         alt={`${index + 1}.jpg`}
         fill
-        className={clsx(
-          'w-full aspect-square rounded-full',
-
-          className
-        )}
-        fetchPriority={'high'}
+        className={cn('w-full aspect-square rounded-full', className)}
         loading={'lazy'}
         placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(400, 400))}`}
       />
