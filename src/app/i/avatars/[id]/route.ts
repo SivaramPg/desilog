@@ -19,7 +19,7 @@ export async function GET(
     })
 
     const imgBuffer = await sharp(
-      path.resolve(`./public/optimised/avatars/${id}.png`)
+      path.resolve(`./public/static/avatars/${id}.png`)
     )
       .resize(width)
       .png({ quality: 85 })
