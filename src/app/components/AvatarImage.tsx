@@ -2,7 +2,25 @@
 
 import clsx from 'clsx'
 import Image from 'next/image'
-import { useState } from 'react'
+
+const shimmer = (w: number, h: number) => `
+<svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="g">
+      <stop stop-color="#ccc" offset="20%" />
+      <stop stop-color="#ddd" offset="50%" />
+      <stop stop-color="#ccc" offset="70%" />
+    </linearGradient>
+  </defs>
+  <rect width="${w}" height="${h}" fill="#ccc" />
+  <rect id="r" width="${w}" height="${h}" fill="url(#g)" />
+  <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
+</svg>`
+
+const toBase64 = (str: string) =>
+  typeof window === 'undefined'
+    ? Buffer.from(str).toString('base64')
+    : window.btoa(str)
 
 export function AvatarImage({
   className,
@@ -13,35 +31,22 @@ export function AvatarImage({
   index: number
   url: string
 }) {
-  const [isLoaded, setIsLoaded] = useState(false)
-
   return (
-    <>
-      {!isLoaded ? (
-        <div
-          className={clsx(
-            'w-full aspect-square rounded-full bg-slate-300 animate-pulse',
-            className
-          )}
-        />
-      ) : null}
+    <div className="w-full aspect-square relative">
       <Image
         unoptimized
         src={url}
         alt={`${index + 1}.jpg`}
-        width={100}
-        height={100}
+        fill
         className={clsx(
-          'w-full aspect-square bg-slate-300 rounded-full',
-          isLoaded ? 'inline-block' : 'hidden',
+          'w-full aspect-square rounded-full',
+
           className
         )}
-        fetchPriority={'auto'}
-        onLoadingComplete={() => {
-          setIsLoaded(true)
-        }}
-        loading={'eager'}
+        fetchPriority={'high'}
+        loading={'lazy'}
+        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(400, 400))}`}
       />
-    </>
+    </div>
   )
 }
