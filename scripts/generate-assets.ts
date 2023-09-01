@@ -4,14 +4,14 @@ import sharp from 'sharp'
 
 const fsPromises = fs.promises
 
-const avatarsDir = path.resolve(__dirname, '../public/original/avatars')
-const charactersDir = path.resolve(__dirname, '../public/original/characters')
-const charactersBWDir = path.resolve(
+const avatarsDir = path.resolve(__dirname, '../public/raw/avatars')
+const charactersDir = path.resolve(
   __dirname,
-  '../public/original/characters-bw'
+  '../public/raw/characters/vibrant'
 )
+const charactersBWDir = path.resolve(__dirname, '../public/raw/characters/mono')
 
-const publicDir = path.resolve(__dirname, '../public/optimised')
+const publicDir = path.resolve(__dirname, '../public/static')
 
 const main = async () => {
   try {
@@ -33,11 +33,17 @@ const main = async () => {
         .resize(1000, 1000)
         .png({ quality: 85 })
         .toFile(path.resolve(publicDir, `avatars/${count1}.png`))
+      await sharp(buffer)
+        .resize(1000, 1000)
+        .jpeg({ mozjpeg: true, quality: 75 })
+        .toFile(path.resolve(publicDir, `avatars/${count1}.jpg`))
       count1++
     }
 
-    if (!fs.existsSync(path.resolve(publicDir, './characters'))) {
-      await fsPromises.mkdir(path.resolve(publicDir, './characters'))
+    if (!fs.existsSync(path.resolve(publicDir, './characters/vibrant'))) {
+      await fsPromises.mkdir(path.resolve(publicDir, './characters/vibrant'), {
+        recursive: true,
+      })
     }
 
     let count2 = 1
@@ -51,14 +57,25 @@ const main = async () => {
           fit: 'contain',
           background: { r: 0, g: 0, b: 0, alpha: 0 },
         })
-
         .png({ quality: 85 })
-        .toFile(path.resolve(publicDir, `characters/${count2}.png`))
+        .toFile(path.resolve(publicDir, `characters/vibrant/${count2}.png`))
+
+      await sharp(buffer)
+        .flatten({ background: { r: 255, g: 255, b: 255, alpha: 1 } })
+        .resize(2000, 2000, {
+          fit: 'contain',
+          background: { r: 255, g: 255, b: 255, alpha: 1 },
+        })
+
+        .jpeg({ mozjpeg: true, quality: 75 })
+        .toFile(path.resolve(publicDir, `characters/vibrant/${count2}.jpg`))
       count2++
     }
 
-    if (!fs.existsSync(path.resolve(publicDir, './characters-bw'))) {
-      await fsPromises.mkdir(path.resolve(publicDir, './characters-bw'))
+    if (!fs.existsSync(path.resolve(publicDir, './characters/mono'))) {
+      await fsPromises.mkdir(path.resolve(publicDir, './characters/mono'), {
+        recursive: true,
+      })
     }
 
     let count3 = 1
@@ -73,7 +90,16 @@ const main = async () => {
           background: { r: 0, g: 0, b: 0, alpha: 0 },
         })
         .png({ quality: 85 })
-        .toFile(path.resolve(publicDir, `characters-bw/${count3}.png`))
+        .toFile(path.resolve(publicDir, `characters/mono/${count3}.png`))
+
+      await sharp(buffer)
+        .flatten({ background: { r: 255, g: 255, b: 255, alpha: 1 } })
+        .resize(2000, 2000, {
+          fit: 'contain',
+          background: { r: 255, g: 255, b: 255, alpha: 1 },
+        })
+        .jpeg({ mozjpeg: true, quality: 75 })
+        .toFile(path.resolve(publicDir, `characters/mono/${count3}.jpg`))
       count3++
     }
   } catch (error) {
