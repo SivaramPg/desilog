@@ -33,12 +33,16 @@ export default function Home() {
         {new Array(AVATARS_COUNT - 1).fill(0).map((_, i) => (
           <a
             key={i}
-            href={`https://desilog.sivaramp.com/static/avatars/${i + 1}.jpg`}
+            href={`https://desilog-assets.sivaramp.com/static/avatars/${
+              i + 1
+            }.jpg`}
             target="_blank"
           >
             <AvatarImage
               className="rounded-3xl shadow-xl drop-shadow-xl"
-              url={`https://desilog.sivaramp.com/static/avatars/${i + 1}.jpg`}
+              url={`https://desilog-assets.sivaramp.com/static/avatars/${
+                i + 1
+              }.jpg`}
               index={i}
             />
           </a>
@@ -54,12 +58,16 @@ export default function Home() {
         {new Array(AVATARS_COUNT - 1).fill(0).map((_, i) => (
           <a
             key={i}
-            href={`https://desilog.sivaramp.com/raw/avatars/${i + 1}.png`}
+            href={`https://desilog-assets.sivaramp.com/raw/avatars/${
+              i + 1
+            }.png`}
             target="_blank"
           >
             <AvatarImage
               className="rounded shadow-xl drop-shadow-xl"
-              url={`https://desilog.sivaramp.com/raw/avatars/${i + 1}.png`}
+              url={`https://desilog-assets.sivaramp.com/raw/avatars/${
+                i + 1
+              }.png`}
               index={i}
             />
           </a>
