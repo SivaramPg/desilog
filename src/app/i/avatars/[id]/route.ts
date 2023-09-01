@@ -19,17 +19,17 @@ export async function GET(
     })
 
     const imgBuffer = await sharp(
-      path.resolve(`./src/assets/static/avatars/${id}.png`)
+      path.resolve(`./src/assets/static/avatars/${id}.jpg`)
     )
       .resize(width)
-      .png({ quality: 85 })
+      .jpeg({ quality: 85 })
       .toBuffer()
 
     return new NextResponse(imgBuffer, {
       headers: {
-        'Content-Type': 'image/png',
+        'Content-Type': 'image/jpeg',
         'Content-Length': imgBuffer.length.toString(),
-        'Content-Disposition': `inline; filename="avatar-${id}-${width}x${width}.png"`,
+        'Content-Disposition': `inline; filename="avatar-${id}-${width}x${width}.jpg"`,
         'Cache-Control':
           'public, max-age=2592000, stale-while-revalidate=60, stale-if-error=43200, immutable',
         'CDN-Cache-Control':
