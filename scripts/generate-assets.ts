@@ -4,11 +4,11 @@ import sharp from 'sharp'
 
 const fsPromises = fs.promises
 
-const avatarsDir = path.resolve(__dirname, '../public/desilog/avatars')
-const charactersDir = path.resolve(__dirname, '..public/desilog/characters')
+const avatarsDir = path.resolve(__dirname, '../public/original/avatars')
+const charactersDir = path.resolve(__dirname, '../public/original/characters')
 const charactersBWDir = path.resolve(
   __dirname,
-  '..public/desilog/characters-bw'
+  '../public/original/characters-bw'
 )
 
 const publicDir = path.resolve(__dirname, '../public/optimised')
