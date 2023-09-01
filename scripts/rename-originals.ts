@@ -1,14 +1,16 @@
 import fs from 'fs'
 import path from 'path'
-import sharp from 'sharp'
 
 const fsPromises = fs.promises
 
-const avatarsDir = path.resolve(__dirname, '../public/original/avatars')
-const charactersDir = path.resolve(__dirname, '../public/original/characters')
+const avatarsDir = path.resolve(__dirname, '../src/assets/raw/avatars')
+const charactersDir = path.resolve(
+  __dirname,
+  '../src/assets/raw/characters/vibrant'
+)
 const charactersBWDir = path.resolve(
   __dirname,
-  '../public/original/characters-bw'
+  '../src/assets/raw/characters/mono'
 )
 
 const main = async () => {

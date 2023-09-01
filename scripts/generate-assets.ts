@@ -4,12 +4,15 @@ import sharp from 'sharp'
 
 const fsPromises = fs.promises
 
-const avatarsDir = path.resolve(__dirname, '../public/raw/avatars')
+const avatarsDir = path.resolve(__dirname, '../src/assets/raw')
 const charactersDir = path.resolve(
   __dirname,
-  '../public/raw/characters/vibrant'
+  '../src/assets/raw/characters/vibrant'
 )
-const charactersBWDir = path.resolve(__dirname, '../public/raw/characters/mono')
+const charactersBWDir = path.resolve(
+  __dirname,
+  '../src/assets/raw/characters/mono'
+)
 
 const publicDir = path.resolve(__dirname, '../public/static')
 
