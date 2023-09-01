@@ -14,7 +14,7 @@ const charactersBWDir = path.resolve(
   '../src/assets/raw/characters/mono'
 )
 
-const publicDir = path.resolve(__dirname, '../public/static')
+const publicDir = path.resolve(__dirname, '../src/assets/static')
 
 const main = async () => {
   try {
