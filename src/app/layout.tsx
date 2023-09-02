@@ -2,7 +2,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Mulish } from 'next/font/google'
 import Image from 'next/image'
-import Footer from './components/Footer'
+import Footer from '../components/Footer'
+import Navbar from '@/components/Navbar'
+import QuickLinks from '@/components/QuickLinks'
 
 const mulish = Mulish({ subsets: ['latin'] })
 
@@ -27,7 +29,9 @@ export default function RootLayout({
           alt="Prefetch SVG Sprites"
           className="hidden"
         />
+        <Navbar />
         {children}
+        <QuickLinks />
         <Footer />
       </body>
     </html>

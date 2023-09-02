@@ -5,23 +5,21 @@ import { LinkImage } from './LinkImage'
 
 import { ExternalIcon } from '@/icons/ExternalIcon'
 
-interface DynamicGallerySectionProps {
+interface RawGallerySectionProps {
   className?: string
   sectionId: string
   sectionTitle: string
   galleryItemsCount: number
-  galleryItemType: 'avatars' | 'characters' | 'characters-bw'
-  galleryImageDimension: number
+  galleryItemType: 'avatars' | 'characters/vibrant' | 'characters/mono'
 }
 
-const DynamicGallerySection = ({
+const RawGallerySection = ({
   className,
   sectionId,
   sectionTitle,
   galleryItemsCount,
   galleryItemType,
-  galleryImageDimension,
-}: DynamicGallerySectionProps): JSX.Element => {
+}: RawGallerySectionProps): JSX.Element => {
   return (
     <div className={cn(className)}>
       <h2
@@ -36,17 +34,17 @@ const DynamicGallerySection = ({
         </Link>
         {sectionTitle}
       </h2>
-      <section className="max-w-screen-sm mx-auto grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-10 px-4">
+      <section className="max-w-screen-2xl mx-auto grid grid-flow-row-dense grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-10 px-4">
         {new Array(galleryItemsCount).fill(0).map((_, i) => (
           <LinkImage
             key={i}
-            className="shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-            url={`https://desilog.sivaramp.com/i/${galleryItemType}/${
+            className="rounded object-contain shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
+            url={`https://desilog.sivaramp.com/raw/${galleryItemType}/${
               i + 1
-            }/${galleryImageDimension}`}
+            }.png`}
             index={i}
             customElement={
-              <ExternalIcon className="absolute top-[2px] right-[2px] w-3 h-3" />
+              <ExternalIcon className="absolute top-3 right-3 w-5 h-5" />
             }
           />
         ))}
@@ -55,4 +53,4 @@ const DynamicGallerySection = ({
   )
 }
 
-export default DynamicGallerySection
+export default RawGallerySection

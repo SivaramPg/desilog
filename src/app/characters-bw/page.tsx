@@ -1,17 +1,17 @@
 import Link from 'next/link'
 
-import DynamicGallerySection from '../components/DynamicGallerySection'
-import { LinkImage } from '@/app/components/LinkImage'
+import DynamicGallerySection from '../../components/DynamicGallerySection'
+import { LinkImage } from '@/components/LinkImage'
 
 import { CHARACTERS_BW_COUNT } from '@/constants'
 
 import { ExternalIcon } from '@/icons/ExternalIcon'
-import OptimisedGallerySection from '../components/OptimisedGallerySection'
-import RawGallerySection from '../components/RawGallerySection'
+import OptimisedGallerySection from '../../components/OptimisedGallerySection'
+import RawGallerySection from '../../components/RawGallerySection'
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen py-20">
+    <main className="w-full min-h-screen py-20 bg-gradient-to-t from-indigo-400 to-cyan-400">
       <DynamicGallerySection
         sectionId="dynamic"
         sectionTitle="`Dynamic` Desi B/W Characters"
