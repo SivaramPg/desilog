@@ -12,14 +12,14 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
   return (
     <section className={clsx('w-full min-h-[calc(60vh)]', className)}>
       <div className="min-h-[calc(60vh)] w-full max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 py-20">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black inline-flex items-center gap-4 bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black flex items-center justify-center gap-4 bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text text-transparent flex-wrap">
           Anaek
           <Image
             src="/icons/logo.svg"
-            height={100}
+            height={50}
             width={400}
             alt="Anaek Desi Log"
-            className=""
+            className="w-48 sm:w-72 md:w-96"
           />
         </h1>
         <h2 className="text-2xl lg:text-3xl opacity-80 font-bold text-center mt-2 md:mt-4 mb-2">
