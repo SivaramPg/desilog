@@ -1,42 +1,61 @@
 import Link from 'next/link'
 
+import HeroSection from '@/components/HeroSection'
 import DynamicGallerySection from '../components/DynamicGallerySection'
-import { LinkImage } from '@/components/LinkImage'
-
-import { AVATARS_COUNT } from '@/constants'
-
-import { ExternalIcon } from '@/icons/ExternalIcon'
-import OptimisedGallerySection from '../components/OptimisedGallerySection'
-import RawGallerySection from '../components/RawGallerySection'
+import SpriteIcon, { Icons } from '@/components/SpriteIcon'
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen py-20 bg-gradient-to-t from-blue-200 to-cyan-200">
+    <main className="w-full min-h-screen pb-20 bg-gradient-to-t from-blue-200 to-cyan-200">
+      <HeroSection />
       <DynamicGallerySection
         sectionId="dynamic"
-        sectionTitle="`Dynamic` Desi Avatars"
-        galleryItemsCount={AVATARS_COUNT}
+        sectionTitle="Kuch `Dynamic` Desi Avatars"
+        galleryItemsCount={5}
         galleryItemType="avatars"
         galleryImageDimension={200}
       />
+      <Link
+        href="/avatars"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-white rounded-lg hover:shadow-md mx-auto duration-100"
+      >
+        <SpriteIcon id={Icons['eye-open']} width={28} height={28} />
+        View All Avatars
+      </Link>
 
       <div className="border-b border-gray-500 my-10" />
 
-      <OptimisedGallerySection
-        sectionId="optimised"
-        sectionTitle="`Optimised` Desi Avatars"
-        galleryItemsCount={AVATARS_COUNT}
-        galleryItemType="avatars"
+      <DynamicGallerySection
+        sectionId="dynamic"
+        sectionTitle="Kuch `Dynamic` Desi Characters"
+        galleryItemsCount={5}
+        galleryItemType="characters"
+        galleryImageDimension={512}
       />
+      <Link
+        href="/avatars"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-white rounded-lg hover:shadow-md mx-auto duration-100"
+      >
+        <SpriteIcon id={Icons['eye-open']} width={28} height={28} />
+        View All Characters
+      </Link>
 
       <div className="border-b border-gray-500 my-10" />
 
-      <RawGallerySection
-        sectionId="raw"
-        sectionTitle="`Raw` Desi Avatars"
-        galleryItemsCount={AVATARS_COUNT}
-        galleryItemType="avatars"
+      <DynamicGallerySection
+        sectionId="dynamic"
+        sectionTitle="Kuch `Dynamic` Desi B/W Characters"
+        galleryItemsCount={5}
+        galleryItemType="characters-bw"
+        galleryImageDimension={512}
       />
+      <Link
+        href="/avatars"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-white rounded-lg hover:shadow-md mx-auto duration-100"
+      >
+        <SpriteIcon id={Icons['eye-open']} width={28} height={28} />
+        View All B/W Characters
+      </Link>
     </main>
   )
 }
