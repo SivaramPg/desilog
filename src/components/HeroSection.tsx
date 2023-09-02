@@ -10,7 +10,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
   return (
-    <section className={clsx('w-full min-h-[calc(60vh)]', className)}>
+    <section className={clsx('w-full min-h-[calc(60vh)] px-4', className)}>
       <div className="min-h-[calc(60vh)] w-full max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 py-20">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black flex items-center justify-center gap-4 bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text text-transparent flex-wrap">
           Anaek

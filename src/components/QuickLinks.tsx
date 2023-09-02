@@ -25,6 +25,18 @@ const QuickLinks = ({ className }: QuickLinksProps): JSX.Element => {
       {show && (
         <>
           <Link
+            href="/"
+            className="flex flex-grow items-center justify-center gap-4"
+          >
+            <span className="text-white font-bold drop-shadow-md">Home</span>
+            <SpriteIcon
+              id={Icons.home}
+              width={28}
+              height={28}
+              className="invert drop-shadow-md"
+            />
+          </Link>
+          <Link
             href="/avatars"
             className="flex flex-grow items-center justify-center gap-4"
           >
