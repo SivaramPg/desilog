@@ -2,7 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Mulish } from 'next/font/google'
 import Image from 'next/image'
-import Footer from '../components/Footer'
+
+import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import QuickLinks from '@/components/QuickLinks'
 
@@ -12,6 +13,17 @@ export const metadata: Metadata = {
   title: 'Anaek Desi Log',
   description:
     'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
+  openGraph: {
+    title: 'Anaek Desi Log',
+    description:
+      'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
+  },
+  twitter: {
+    title: 'Anaek Desi Log',
+    description:
+      'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
+    card: 'summary_large_image',
+  },
 }
 
 export default function RootLayout({
