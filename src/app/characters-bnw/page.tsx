@@ -12,13 +12,13 @@ export default function Home() {
         {new Array(CHARACTERS_BW_COUNT).fill(0).map((_, i) => (
           <a
             key={i}
-            href={`https://desilog.sivaramp.com/i/characters-bw/${i + 1}/200`}
+            href={`https://desilog.sivaramp.com/i/characters-bw/${i + 1}/512`}
             target="_blank"
             className="relative"
           >
             <AvatarImage
               className="rounded 3xl shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog.sivaramp.com/i/characters-bw/${i + 1}/200`}
+              url={`https://desilog.sivaramp.com/i/characters-bw/${i + 1}/512`}
               index={i}
             />
             <ExternalIcon className="absolute top-3 right-3 w-3 h-3" />
