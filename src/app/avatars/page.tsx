@@ -1,6 +1,8 @@
-import { AvatarImage } from '@/app/components/AvatarImage'
+import { LinkImage } from '@/app/components/LinkImage'
 
 import { AVATARS_COUNT } from '@/constants'
+
+import { ExternalIcon } from '@/icons/ExternalIcon'
 
 export default function Home() {
   return (
@@ -10,19 +12,15 @@ export default function Home() {
       </h2>
       <section className="max-w-screen-sm mx-auto grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-10 px-4">
         {new Array(AVATARS_COUNT).fill(0).map((_, i) => (
-          <a
+          <LinkImage
             key={i}
-            href={`https://desilog.sivaramp.com/i/avatars/${i + 1}/200`}
-            target="_blank"
-            className="relative"
-          >
-            <AvatarImage
-              className="shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog.sivaramp.com/i/avatars/${i + 1}/200`}
-              index={i}
-            />
-            <ExternalIcon className="absolute top-[2px] right-[2px] w-3 h-3" />
-          </a>
+            className="shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
+            url={`https://desilog.sivaramp.com/i/avatars/${i + 1}/200`}
+            index={i}
+            customElement={
+              <ExternalIcon className="absolute top-[2px] right-[2px] w-3 h-3" />
+            }
+          />
         ))}
       </section>
 
@@ -33,19 +31,15 @@ export default function Home() {
       </h2>
       <section className="max-w-screen-lg mx-auto grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 py-10 px-4">
         {new Array(AVATARS_COUNT).fill(0).map((_, i) => (
-          <a
+          <LinkImage
             key={i}
-            href={`https://desilog.sivaramp.com/static/avatars/${i + 1}.jpg`}
-            target="_blank"
-            className="relative"
-          >
-            <AvatarImage
-              className="rounded-3xl shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog.sivaramp.com/static/avatars/${i + 1}.jpg`}
-              index={i}
-            />
-            <ExternalIcon className="absolute top-3 right-3 w-5 h-5" />
-          </a>
+            className="rounded-3xl shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
+            url={`https://desilog.sivaramp.com/static/avatars/${i + 1}.jpg`}
+            index={i}
+            customElement={
+              <ExternalIcon className="absolute top-3 right-3 w-5 h-5" />
+            }
+          />
         ))}
       </section>
 
@@ -56,36 +50,17 @@ export default function Home() {
       </h2>
       <section className="max-w-screen-2xl mx-auto grid grid-flow-row-dense grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-10 px-4">
         {new Array(AVATARS_COUNT).fill(0).map((_, i) => (
-          <a
+          <LinkImage
             key={i}
-            href={`https://desilog.sivaramp.com/raw/avatars/${i + 1}.png`}
-            target="_blank"
-            className="relative"
-          >
-            <AvatarImage
-              className="rounded shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog.sivaramp.com/raw/avatars/${i + 1}.png`}
-              index={i}
-            />
-            <ExternalIcon className="absolute top-3 right-3 w-5 h-5" />
-          </a>
+            className="rounded shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
+            url={`https://desilog.sivaramp.com/raw/avatars/${i + 1}.png`}
+            index={i}
+            customElement={
+              <ExternalIcon className="absolute top-3 right-3 w-5 h-5" />
+            }
+          />
         ))}
       </section>
     </main>
-  )
-}
-
-const ExternalIcon = ({ className }: { className?: string }) => {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 512 512"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill="#000000"
-        d="M432 320h-32a16 16 0 0 0-16 16v112H64V128h144a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48a48 48 0 0 0-48 48v352a48 48 0 0 0 48 48h352a48 48 0 0 0 48-48V336a16 16 0 0 0-16-16ZM488 0H360c-21.37 0-32.05 25.91-17 41l35.73 35.73L135 320.37a24 24 0 0 0 0 34L157.67 377a24 24 0 0 0 34 0l243.61-243.68L471 169c15 15 41 4.5 41-17V24a24 24 0 0 0-24-24Z"
-      />
-    </svg>
   )
 }

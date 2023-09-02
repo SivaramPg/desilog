@@ -22,26 +22,33 @@ const toBase64 = (str: string) =>
     ? Buffer.from(str).toString('base64')
     : window.btoa(str)
 
-export function AvatarImage({
+export function LinkImage({
   className,
   index,
   url,
+  customElement,
 }: {
   className?: string
   index: number
   url: string
+  customElement?: React.ReactNode
 }) {
   return (
-    <div className="w-full aspect-square relative">
-      <Image
-        unoptimized
-        src={url}
-        alt={`${index + 1}.jpg`}
-        fill
-        className={cn('w-full aspect-square rounded-full', className)}
-        loading={'lazy'}
-        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(400, 400))}`}
-      />
-    </div>
+    <a href={url} target="_blank">
+      <div className="w-full aspect-square relative">
+        <Image
+          unoptimized
+          src={url}
+          alt={`${index + 1}.jpg`}
+          fill
+          className={cn('w-full aspect-square rounded-full', className)}
+          loading={'lazy'}
+          placeholder={`data:image/svg+xml;base64,${toBase64(
+            shimmer(400, 400)
+          )}`}
+        />
+        {customElement}
+      </div>
+    </a>
   )
 }
