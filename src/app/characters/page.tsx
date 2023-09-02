@@ -35,7 +35,7 @@ export default function Home() {
         {new Array(CHARACTERS_COUNT).fill(0).map((_, i) => (
           <a
             key={i}
-            href={`https://desilog-assets.sivaramp.com/static/characters/vibrant/${
+            href={`https://desilog.sivaramp.com/static/characters/vibrant/${
               i + 1
             }.jpg`}
             target="_blank"
@@ -43,7 +43,7 @@ export default function Home() {
           >
             <AvatarImage
               className="rounded-xl shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog-assets.sivaramp.com/static/characters/vibrant/${
+              url={`https://desilog.sivaramp.com/static/characters/vibrant/${
                 i + 1
               }.jpg`}
               index={i}
@@ -62,7 +62,7 @@ export default function Home() {
         {new Array(CHARACTERS_COUNT).fill(0).map((_, i) => (
           <a
             key={i}
-            href={`https://desilog-assets.sivaramp.com/raw/characters/vibrant/${
+            href={`https://desilog.sivaramp.com/raw/characters/vibrant/${
               i + 1
             }.png`}
             target="_blank"
@@ -70,7 +70,7 @@ export default function Home() {
           >
             <AvatarImage
               className="rounded object-contain shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog-assets.sivaramp.com/raw/characters/vibrant/${
+              url={`https://desilog.sivaramp.com/raw/characters/vibrant/${
                 i + 1
               }.png`}
               index={i}

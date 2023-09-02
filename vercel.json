@@ -1,4 +1,14 @@
 {
+  "redirects": [
+    {
+      "source": "/raw/:path*",
+      "destination": "https://desilog-assets.sivaramp.com/raw/:path*"
+    },
+    {
+      "source": "/static/:path*",
+      "destination": "https://desilog-assets.sivaramp.com/static/:path*"
+    }
+  ],
   "rewrites": [
     {
       "source": "/i/avatars/:id/:width",

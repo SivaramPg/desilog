@@ -35,17 +35,13 @@ export default function Home() {
         {new Array(AVATARS_COUNT).fill(0).map((_, i) => (
           <a
             key={i}
-            href={`https://desilog-assets.sivaramp.com/static/avatars/${
-              i + 1
-            }.jpg`}
+            href={`https://desilog.sivaramp.com/static/avatars/${i + 1}.jpg`}
             target="_blank"
             className="relative"
           >
             <AvatarImage
               className="rounded-3xl shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog-assets.sivaramp.com/static/avatars/${
-                i + 1
-              }.jpg`}
+              url={`https://desilog.sivaramp.com/static/avatars/${i + 1}.jpg`}
               index={i}
             />
             <ExternalIcon className="absolute top-3 right-3 w-5 h-5" />
@@ -62,17 +58,13 @@ export default function Home() {
         {new Array(AVATARS_COUNT).fill(0).map((_, i) => (
           <a
             key={i}
-            href={`https://desilog-assets.sivaramp.com/raw/avatars/${
-              i + 1
-            }.png`}
+            href={`https://desilog.sivaramp.com/raw/avatars/${i + 1}.png`}
             target="_blank"
             className="relative"
           >
             <AvatarImage
               className="rounded shadow-xl border hover:shadow-2xl hover:border-2 duration-200"
-              url={`https://desilog-assets.sivaramp.com/raw/avatars/${
-                i + 1
-              }.png`}
+              url={`https://desilog.sivaramp.com/raw/avatars/${i + 1}.png`}
               index={i}
             />
             <ExternalIcon className="absolute top-3 right-3 w-5 h-5" />
