@@ -24,7 +24,7 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
         </h1>
         <h2 className="text-2xl lg:text-3xl opacity-80 font-bold text-center mt-2 md:mt-4 mb-2">
           Desi logon ke colourful avatar aur characters <br />
-          vibrant aur black & white dono bilkul India ki tarah :))
+          vibrant aur black & white dono bilkul India ki tarah :)
         </h2>
         <h3 className="max-w-screen-sm mx-5 text-md sm:text-xl md:text-xl opacity-75 text-center mt-2 mb-6">
           Free dynamic, optimized or raw placeholder images in an Indian
