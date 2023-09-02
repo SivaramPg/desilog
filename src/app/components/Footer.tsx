@@ -11,7 +11,12 @@ export default function Footer() {
             Made with
             <SpriteIcon id={Icons['heart']} width={20} height={20} />
             by
-            <span className="font-bold">Sivaram P</span>
+            <a
+              href="http://sivaramp.com"
+              className="hover:underline underline-offset-4"
+            >
+              <span className="font-bold">Sivaram P</span>
+            </a>
             <span className="font-mono ml-2 font-bold hidden md:block">
               2023
             </span>
