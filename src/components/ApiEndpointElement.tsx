@@ -34,7 +34,7 @@ const ApiEndpointElement = ({
         <input
           type="text"
           className="w-full bg-slate-50 rounded-l-md border border-r-0 px-4 font-bold text-lg"
-          value={text}
+          value={text.replace('https://', '')}
           readOnly
         />
         <a

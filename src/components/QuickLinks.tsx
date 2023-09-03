@@ -1,9 +1,9 @@
 'use client'
 
 import clsx from 'clsx'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+
 import SpriteIcon, { Icons } from './SpriteIcon'
 
 interface QuickLinksProps {
@@ -13,8 +13,12 @@ interface QuickLinksProps {
 const QuickLinks = ({ className }: QuickLinksProps): JSX.Element => {
   const [show, setShow] = useState(false)
 
+  const wrapperRef = useRef<HTMLDivElement>(null)
+  useOutsideAlerter(wrapperRef, () => setShow(false))
+
   return (
     <div
+      ref={wrapperRef}
       className={clsx(
         'fixed z-50 bottom-[50px] right-[30px] rounded-3xl flex flex-col items-end justify-between gap-4 w-auto mx-auto sm:hidden p-3 flex-grow',
         'bg-gradient-to-t from-cyan-500 to-blue-500',
@@ -100,3 +104,27 @@ const QuickLinks = ({ className }: QuickLinksProps): JSX.Element => {
 }
 
 export default QuickLinks
+
+import React, { useRef, useEffect } from 'react'
+
+/**
+ * Hook that alerts clicks outside of the passed ref
+ */
+function useOutsideAlerter(ref: any, cb: () => void) {
+  useEffect(() => {
+    /**
+     * Alert if clicked on outside of element
+     */
+    function handleClickOutside(event: MouseEvent) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        cb()
+      }
+    }
+    // Bind the event listener
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [ref, cb])
+}
