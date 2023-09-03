@@ -33,7 +33,7 @@ const ApiEndpointElement = ({
       >
         <input
           type="text"
-          className="w-full bg-slate-50 rounded-l-md border border-r-0 px-4 font-bold text-lg"
+          className="w-full bg-slate-50 rounded-l-md border border-r-0 pl-4 font-bold text-md md:text-lg"
           value={text.replace('https://', '')}
           readOnly
         />
@@ -45,12 +45,17 @@ const ApiEndpointElement = ({
             'bg-slate-50'
           )}
         >
-          <SpriteIcon id={Icons['tab-external']} width={32} height={32} />
+          <SpriteIcon
+            id={Icons['tab-external']}
+            width={32}
+            height={32}
+            className="w-6 md:w-8"
+          />
         </a>
         <button
           type="button"
           className={clsx(
-            'w-32 text-white font-bold text-lg',
+            'w-32 text-white font-bold text-md md:text-lg',
             copied ? 'bg-green-600' : 'bg-blue-500'
           )}
           onClick={() => {
