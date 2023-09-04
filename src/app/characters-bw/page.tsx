@@ -1,13 +1,8 @@
-import Link from 'next/link'
-
-import DynamicGallerySection from '../../components/DynamicGallerySection'
-import { LinkImage } from '@/components/LinkImage'
+import DynamicGallerySection from '@/components/DynamicGallerySection'
+import OptimisedGallerySection from '@/components/OptimisedGallerySection'
+import RawGallerySection from '@/components/RawGallerySection'
 
 import { CHARACTERS_BW_COUNT } from '@/constants'
-
-import { ExternalIcon } from '@/icons/ExternalIcon'
-import OptimisedGallerySection from '../../components/OptimisedGallerySection'
-import RawGallerySection from '../../components/RawGallerySection'
 
 export default function Home() {
   return (
