@@ -3,6 +3,7 @@ import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import DynamicGallerySection from '../components/DynamicGallerySection'
 import SpriteIcon, { Icons } from '@/components/SpriteIcon'
+import ApiEndpointElement from '@/components/ApiEndpointElement'
 
 export default function Home() {
   return (
@@ -15,11 +16,20 @@ export default function Home() {
         galleryItemType="avatars"
         galleryImageDimension={200}
       />
+      <ApiEndpointElement
+        className="mb-10"
+        text={`https://desilog.sivaramp.com/i/avatars/1/256`}
+      />
       <Link
         href="/avatars"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-white rounded-lg hover:shadow-md mx-auto duration-100"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100"
       >
-        <SpriteIcon id={Icons['eye-open']} width={28} height={28} />
+        <SpriteIcon
+          id={Icons['eye-open']}
+          width={28}
+          height={28}
+          className="invert"
+        />
         View All Avatars
       </Link>
 
@@ -32,11 +42,20 @@ export default function Home() {
         galleryItemType="characters"
         galleryImageDimension={512}
       />
+      <ApiEndpointElement
+        className="mb-10"
+        text={`https://desilog.sivaramp.com/i/characters/1/512`}
+      />
       <Link
         href="/avatars"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-white rounded-lg hover:shadow-md mx-auto duration-100"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100"
       >
-        <SpriteIcon id={Icons['eye-open']} width={28} height={28} />
+        <SpriteIcon
+          id={Icons['eye-open']}
+          width={28}
+          height={28}
+          className="invert"
+        />
         View All Characters
       </Link>
 
@@ -49,11 +68,20 @@ export default function Home() {
         galleryItemType="characters-bw"
         galleryImageDimension={512}
       />
+      <ApiEndpointElement
+        className="mb-10"
+        text={`https://desilog.sivaramp.com/i/characters-bw/1/512`}
+      />
       <Link
         href="/avatars"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-white rounded-lg hover:shadow-md mx-auto duration-100"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100"
       >
-        <SpriteIcon id={Icons['eye-open']} width={28} height={28} />
+        <SpriteIcon
+          id={Icons['eye-open']}
+          width={28}
+          height={28}
+          className="invert"
+        />
         View All B/W Characters
       </Link>
     </main>
