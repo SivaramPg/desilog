@@ -22,7 +22,7 @@ export async function GET(
       path.resolve(`./src/assets/static/characters/mono/${id}.jpg`)
     )
       .resize(width)
-      .jpeg({ quality: 85 })
+      // .jpeg({ quality: 85 })
       .toBuffer()
 
     return new NextResponse(imgBuffer, {
