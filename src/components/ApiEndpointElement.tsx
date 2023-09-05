@@ -19,7 +19,7 @@ const ApiEndpointElement = ({
   const { copied, copy } = useClipboard({ copiedTimeout: 1_000 })
 
   return (
-    <div className="w-full max-w-screen-sm flex flex-col gap-2 mx-auto">
+    <div className="w-full max-w-screen-sm flex flex-col gap-2 mx-auto px-4">
       {!hideLabel && (
         <h4 className="font-bold text-lg md:text-xl opacity-70">
           Example API Endpoint:
@@ -27,16 +27,13 @@ const ApiEndpointElement = ({
       )}
       <div
         className={clsx(
-          'w-full h-14 flex rounded-md overflow-hidden',
+          'w-full min-h-14 flex rounded-md overflow-hidden',
           className
         )}
       >
-        <input
-          type="text"
-          className="w-full bg-slate-50 rounded-l-md border border-r-0 pl-4 font-bold text-md md:text-lg"
-          value={text}
-          readOnly
-        />
+        <div className="w-full bg-slate-50 rounded-l-md border border-r-0 pl-4 py-2 font-bold text-md md:text-lg resize-none flex items-center break-all">
+          {text.replace('https://', '')}
+        </div>
         <a
           href={text}
           target="_blank"
