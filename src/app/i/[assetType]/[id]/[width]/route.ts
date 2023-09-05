@@ -1,9 +1,9 @@
 import path from 'path'
 import { NextRequest, NextResponse } from 'next/server'
 import sharp from 'sharp'
-import { z } from 'zod'
 
-import { AssetSchema, AssetTypeEnum } from '@/schemas/AssetSchema'
+import { AssetSchema } from '@/schemas/AssetSchema'
+import { CDN_FRIENDLY_HEADERS, getAssetTypePath } from '@/constants'
 
 type Params = {
   assetType: string
@@ -39,34 +39,3 @@ export async function GET(
     return new NextResponse('invalid params', { status: 400 })
   }
 }
-
-const getAssetTypePath = (assetType: z.infer<typeof AssetTypeEnum>) => {
-  switch (assetType) {
-    case AssetTypeEnum.enum['characters-bw']:
-      return 'characters/mono'
-
-    case AssetTypeEnum.enum.characters:
-      return 'characters/vibrant'
-
-    case AssetTypeEnum.enum.avatars:
-    default:
-      return 'avatars'
-  }
-}
-
-const CDN_FRIENDLY_HEADERS = (
-  assetType: string,
-  imgBuffer: Buffer,
-  id: number,
-  width: number
-) => ({
-  'Content-Type': 'image/jpeg',
-  'Content-Length': imgBuffer.length.toString(),
-  'Content-Disposition': `inline; filename="${assetType}-${id}-${width}x${width}.jpg"`,
-  'Cache-Control':
-    'public, max-age=2592000, stale-while-revalidate=60, stale-if-error=43200, immutable',
-  'CDN-Cache-Control':
-    'public, max-age=2592000, stale-while-revalidate=60, stale-if-error=43200, immutable',
-  'Vercel-CDN-Cache-Control':
-    'public, max-age=2592000, stale-while-revalidate=60, stale-if-error=43200, immutable',
-})
