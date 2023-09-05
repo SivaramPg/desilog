@@ -1,8 +1,8 @@
-// import ApiEndpointElement from '@/components/ApiEndpointElement'
-import SpriteIcon, { Icons } from '@/components/SpriteIcon'
 import clsx from 'clsx'
 import Image from 'next/image'
-import ApiEndpointElement from './ApiEndpointElement'
+
+import SpriteIcon, { Icons } from '@/components/SpriteIcon'
+import { LinkImage } from './LinkImage'
 
 interface HeroSectionProps {
   className?: string
@@ -10,8 +10,10 @@ interface HeroSectionProps {
 
 const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
   return (
-    <section className={clsx('w-full min-h-[calc(60vh)] px-4', className)}>
-      <div className="min-h-[calc(60vh)] w-full max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 py-20">
+    <section
+      className={clsx('w-full min-h-[calc(100vh-64px)] px-4', className)}
+    >
+      <div className="min-h-[calc(100vh-64px)] w-full max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 py-20">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black flex items-center justify-center gap-4 bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text text-transparent flex-wrap">
           Anaek
           <Image
@@ -45,22 +47,40 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
             className="inline-block"
           />
         </h3>
-        <div className="w-full max-w-screen-lg px-2">
-          <ApiEndpointElement
-            className="mb-4"
-            hideLabel
-            text={`https://desilog.sivaramp.com/i/avatars/1/786`}
-          />
-          <ApiEndpointElement
-            className="mb-4"
-            hideLabel
-            text={`https://desilog.sivaramp.com/i/characters/1/786`}
-          />
-          <ApiEndpointElement
-            className="mb-4"
-            hideLabel
-            text={`https://desilog.sivaramp.com/i/characters-bw/1/786`}
-          />
+        <div className="w-full max-w-screen-sm p-2 flex flex-wrap gap-4 items-center justify-center">
+          {new Array(5).fill(0).map((_, i) => (
+            <div key={i} className="w-24 shrink aspect-square relative">
+              <LinkImage
+                className="shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
+                index={i + 1}
+                url={`https://desilog.sivaramp.com/i/avatars/${
+                  (i + 1) * 3
+                }/128`}
+              />
+            </div>
+          ))}
+          {new Array(5).fill(0).map((_, i) => (
+            <div key={i} className="w-24 shrink aspect-square relative">
+              <LinkImage
+                className="shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
+                index={i + 1}
+                url={`https://desilog.sivaramp.com/i/characters/${
+                  (i + 1) * 3
+                }/128`}
+              />
+            </div>
+          ))}
+          {new Array(5).fill(0).map((_, i) => (
+            <div key={i} className="w-24 shrink aspect-square relative">
+              <LinkImage
+                className="shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
+                index={i + 1}
+                url={`https://desilog.sivaramp.com/i/characters-bw/${
+                  (i + 1) * 3
+                }/128`}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
