@@ -29,6 +29,7 @@ export function LinkImage({
   customElement,
   fetchPriority,
   loading,
+  randomizer,
 }: {
   className?: string
   index: number
@@ -36,11 +37,13 @@ export function LinkImage({
   customElement?: React.ReactNode
   fetchPriority?: 'high' | 'low' | 'auto' | undefined
   loading?: 'lazy' | 'eager' | undefined
+  randomizer?: string
 }) {
   return (
     <a href={url} target="_blank">
       <div className="w-full aspect-square relative">
         <Image
+          key={randomizer}
           unoptimized
           src={url}
           alt={`${index + 1}`}

@@ -4,11 +4,23 @@ import HeroSection from '@/components/HeroSection'
 import DynamicGallerySection from '../components/DynamicGallerySection'
 import SpriteIcon, { Icons } from '@/components/SpriteIcon'
 import ApiEndpointElement from '@/components/ApiEndpointElement'
+import RandomGallerySection from '@/components/RandomGallerySection'
 
 export default function Home() {
   return (
     <main className="w-full min-h-screen pb-20 bg-gradient-to-t from-blue-200 to-cyan-200">
       <HeroSection />
+
+      <div className="border-b border-gray-500 my-10" />
+
+      <RandomGallerySection
+        sectionId="random"
+        sectionTitle="Kuch `Random` Desi Log"
+        galleryImageDimension={386}
+      />
+
+      <div className="border-b border-gray-500 my-10" />
+
       <DynamicGallerySection
         sectionId="dynamic"
         sectionTitle="Kuch `Dynamic` Desi Avatars"
@@ -22,7 +34,7 @@ export default function Home() {
       />
       <Link
         href="/avatars"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
@@ -48,7 +60,7 @@ export default function Home() {
       />
       <Link
         href="/avatars"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
@@ -74,7 +86,7 @@ export default function Home() {
       />
       <Link
         href="/avatars"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
