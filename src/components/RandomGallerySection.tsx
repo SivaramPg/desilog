@@ -30,8 +30,6 @@ const RandomGallerySection = ({
     setId(value)
   }, 250)
 
-  console.log(id)
-
   return (
     <div className={cn(className)}>
       <h2
