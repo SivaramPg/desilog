@@ -56,6 +56,8 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
                 url={`https://desilog.sivaramp.com/i/avatars/${
                   (i + 1) * 3
                 }/128`}
+                fetchPriority="high"
+                loading="eager"
               />
             </div>
           ))}
@@ -67,6 +69,8 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
                 url={`https://desilog.sivaramp.com/i/characters/${
                   (i + 1) * 3
                 }/128`}
+                fetchPriority="high"
+                loading="eager"
               />
             </div>
           ))}
@@ -78,6 +82,8 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
                 url={`https://desilog.sivaramp.com/i/characters-bw/${
                   (i + 1) * 3
                 }/128`}
+                fetchPriority="high"
+                loading="eager"
               />
             </div>
           ))}

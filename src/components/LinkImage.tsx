@@ -27,11 +27,15 @@ export function LinkImage({
   index,
   url,
   customElement,
+  fetchPriority,
+  loading,
 }: {
   className?: string
   index: number
   url: string
   customElement?: React.ReactNode
+  fetchPriority?: 'high' | 'low' | 'auto' | undefined
+  loading?: 'lazy' | 'eager' | undefined
 }) {
   return (
     <a href={url} target="_blank">
@@ -42,7 +46,8 @@ export function LinkImage({
           alt={`${index + 1}`}
           fill
           className={cn('w-full aspect-square rounded-full', className)}
-          loading={'lazy'}
+          fetchPriority={fetchPriority}
+          loading={loading ?? 'lazy'}
           placeholder={`data:image/svg+xml;base64,${toBase64(
             shimmer(400, 400)
           )}`}
