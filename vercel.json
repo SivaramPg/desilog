@@ -1,14 +1,14 @@
 {
   "functions": {
-    "i/avatars/[id]/route.ts": {
+    "i/avatars/**/*.ts": {
       "memory": 256,
       "maxDuration": 3
     },
-    "i/characters/[id]/route.ts": {
+    "i/characters/**/*.ts": {
       "memory": 256,
       "maxDuration": 3
     },
-    "i/characters-bw/[id]/route.ts": {
+    "i/characters-bw/**/*.ts": {
       "memory": 256,
       "maxDuration": 3
     }
