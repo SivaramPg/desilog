@@ -2,20 +2,24 @@
 const nextConfig = {
   experimental: {
     outputFileTracingExcludes: {
-      'i/avatars/[id]/route.ts': ['./src/assets/static/characters'],
-      'i/characters/[id]/route.ts': [
+      'app/i/avatars/[id]/route.ts': ['./src/assets/static/characters'],
+      'app/i/characters/[id]/route.ts': [
         './src/assets/static/avatars',
         './src/assets/static/characters/mono',
       ],
-      'i/characters-bw/[id]/route.ts': [
+      'app/i/characters-bw/[id]/route.ts': [
         './src/assets/static/avatars',
         './src/assets/static/characters/vibrant',
       ],
     },
     outputFileTracingIncludes: {
-      'i/avatars/[id]/route.ts': ['./src/assets/static/avatars'],
-      'i/characters/[id]/route.ts': ['./src/assets/static/characters/vibrant'],
-      'i/characters-bw/[id]/route.ts': ['./src/assets/static/characters/mono'],
+      'app/i/avatars/[id]/route.ts': ['./src/assets/static/avatars'],
+      'app/i/characters/[id]/route.ts': [
+        './src/assets/static/characters/vibrant',
+      ],
+      'app/i/characters-bw/[id]/route.ts': [
+        './src/assets/static/characters/mono',
+      ],
     },
   },
 }
