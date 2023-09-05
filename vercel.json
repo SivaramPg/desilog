@@ -1,14 +1,14 @@
 {
   "functions": {
-    "i/avatars/**/*.ts": {
+    "i/avatars/[id]": {
       "memory": 256,
       "maxDuration": 3
     },
-    "i/characters/**/*.ts": {
+    "i/characters/[id]": {
       "memory": 256,
       "maxDuration": 3
     },
-    "i/characters-bw/**/*.ts": {
+    "i/characters-bw/[id]": {
       "memory": 256,
       "maxDuration": 3
     }
