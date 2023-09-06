@@ -5,6 +5,7 @@ import DynamicGallerySection from '../components/DynamicGallerySection'
 import SpriteIcon, { Icons } from '@/components/SpriteIcon'
 import ApiEndpointElement from '@/components/ApiEndpointElement'
 import RandomGallerySection from '@/components/RandomGallerySection'
+import DynamicApiUrlDocs from '@/components/DynamicApiUrlDocs'
 
 export default function Home() {
   return (
@@ -29,8 +30,15 @@ export default function Home() {
         galleryImageDimension={200}
       />
       <ApiEndpointElement
-        className="mb-10"
+        className="mb-5"
         text={`https://desilog.sivaramp.com/i/avatars/1/256`}
+      />
+      <DynamicApiUrlDocs
+        docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"
+        assetType="avatars"
+        maxAssetId="39"
+        maxAssetWidth="1000"
+        className="mb-10"
       />
       <Link
         href="/avatars"
@@ -55,8 +63,15 @@ export default function Home() {
         galleryImageDimension={512}
       />
       <ApiEndpointElement
-        className="mb-10"
+        className="mb-5"
         text={`https://desilog.sivaramp.com/i/characters/1/512`}
+      />
+      <DynamicApiUrlDocs
+        docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"
+        assetType="characters"
+        maxAssetId="72"
+        maxAssetWidth="2000"
+        className="mb-10"
       />
       <Link
         href="/avatars"
@@ -81,8 +96,15 @@ export default function Home() {
         galleryImageDimension={512}
       />
       <ApiEndpointElement
-        className="mb-10"
+        className="mb-5"
         text={`https://desilog.sivaramp.com/i/characters-bw/1/512`}
+      />
+      <DynamicApiUrlDocs
+        docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"
+        assetType="characters-bw"
+        maxAssetId="70"
+        maxAssetWidth="2000"
+        className="mb-10"
       />
       <Link
         href="/avatars"

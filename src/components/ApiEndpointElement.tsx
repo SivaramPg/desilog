@@ -19,7 +19,7 @@ const ApiEndpointElement = ({
   const { copied, copy } = useClipboard({ copiedTimeout: 1_000 })
 
   return (
-    <div className="w-full max-w-screen-sm flex flex-col gap-2 mx-auto px-4">
+    <div className="w-full max-w-screen-md flex flex-col gap-2 mx-auto px-4">
       {!hideLabel && (
         <h4 className="font-bold text-lg md:text-xl opacity-70">
           Example API Endpoint:

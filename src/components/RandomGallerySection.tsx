@@ -9,6 +9,7 @@ import { nanoid } from 'nanoid'
 
 import { LinkImage } from './LinkImage'
 import ApiEndpointElement from './ApiEndpointElement'
+import RandomApiUrlDocs from './RandomApiUrlDocs'
 
 interface RandomGallerySectionProps {
   className?: string
@@ -139,6 +140,7 @@ const RandomGallerySection = ({
         text={`https://desilog.sivaramp.com/r/characters-bw/256`}
         hideLabel
       />
+      <RandomApiUrlDocs docUrl="https://desilog.sivaramp.com/r/<ASSET_TYPE>/<ASSET_WIDTH>" />
     </div>
   )
 }
