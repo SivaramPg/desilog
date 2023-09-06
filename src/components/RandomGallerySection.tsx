@@ -58,7 +58,16 @@ const RandomGallerySection = ({
           url={`https://desilog.sivaramp.com/r/avatars/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <ExternalIcon className={cn('absolute w-6 h-6', 'top-3 right-3')} />
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-3 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+              View Random Avatar
+              <Image
+                src={'/icons/randomise.svg'}
+                alt="randomise"
+                width={16}
+                height={16}
+                fetchPriority="high"
+              />
+            </div>
           }
         />
         <LinkImage
@@ -69,7 +78,16 @@ const RandomGallerySection = ({
           url={`https://desilog.sivaramp.com/r/characters/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <ExternalIcon className={cn('absolute w-6 h-6', 'top-3 right-3')} />
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-3 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+              View Random Character
+              <Image
+                src={'/icons/randomise.svg'}
+                alt="randomise"
+                width={16}
+                height={16}
+                fetchPriority="high"
+              />
+            </div>
           }
         />
         <LinkImage
@@ -80,7 +98,16 @@ const RandomGallerySection = ({
           url={`https://desilog.sivaramp.com/r/characters-bw/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <ExternalIcon className={cn('absolute w-6 h-6', 'top-3 right-3')} />
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-3 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+              View Random B/W Character
+              <Image
+                src={'/icons/randomise.svg'}
+                alt="randomise"
+                width={16}
+                height={16}
+                fetchPriority="high"
+              />
+            </div>
           }
         />
       </section>
