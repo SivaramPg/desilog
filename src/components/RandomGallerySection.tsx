@@ -58,7 +58,7 @@ const RandomGallerySection = ({
           index={1}
           customElement={
             <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
-              View Random Avatar
+              View
               <Image
                 src={'/icons/randomise.svg'}
                 alt="randomise"
@@ -78,7 +78,7 @@ const RandomGallerySection = ({
           index={1}
           customElement={
             <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
-              View Random Character
+              View
               <Image
                 src={'/icons/randomise.svg'}
                 alt="randomise"
@@ -98,7 +98,7 @@ const RandomGallerySection = ({
           index={1}
           customElement={
             <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
-              View Random B/W Character
+              View
               <Image
                 src={'/icons/randomise.svg'}
                 alt="randomise"
