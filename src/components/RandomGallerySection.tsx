@@ -9,8 +9,6 @@ import { nanoid } from 'nanoid'
 
 import { LinkImage } from './LinkImage'
 
-import { ExternalIcon } from '@/icons/ExternalIcon'
-
 interface RandomGallerySectionProps {
   className?: string
   sectionId: string
@@ -28,7 +26,7 @@ const RandomGallerySection = ({
 
   const debounced = useDebouncedCallback((value: string) => {
     setId(value)
-  }, 250)
+  }, 1000)
 
   return (
     <div className={cn(className)}>
@@ -123,7 +121,7 @@ const RandomGallerySection = ({
           className="mr-2 invert"
           fetchPriority="high"
         />
-        Randomise
+        Randomise (1 per sec)
       </button>
     </div>
   )
