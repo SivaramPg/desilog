@@ -6,7 +6,7 @@
     },
     "src/app/r/[assetType]/[width]/route.ts": {
       "memory": 128,
-      "maxDuration": 5
+      "maxDuration": 10
     }
   },
   "redirects": [
