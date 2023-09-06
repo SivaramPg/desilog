@@ -1,0 +1,9 @@
+
+
+User-Agent: *
+Allow: /
+
+Disallow: /i/*
+Disallow /r/*
+
+Sitemap: https://desilog.sivaramp.com/sitemap.xml
