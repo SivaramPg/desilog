@@ -19,7 +19,7 @@ const RandomApiUrlDocs = ({
 
         <ul>
           <li className="list-disc ml-5">
-            <h5 className="text-lg font-semibold break-all font-mono mb-4">
+            <h5 className="text-md font-bold break-all font-mono mb-4">
               <span className="font-black font-sans">URL</span>:<br /> {docUrl}
             </h5>
           </li>
