@@ -13,16 +13,23 @@ export const metadata: Metadata = {
   title: 'Anaek Desi Log',
   description:
     'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
+  metadataBase: new URL('https://desilog.sivaramp.com'),
+  alternates: { canonical: 'https://desilog.sivaramp.com' },
   openGraph: {
-    title: 'Anaek Desi Log',
+    title: { default: 'Anaek Desi Log', template: '%s | Anaek Desi Log' },
     description:
       'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
+    type: 'website',
+    siteName: 'Anaek Desi Log',
+    url: 'https://desilog.sivaramp.com',
+    locale: 'en_US',
   },
   twitter: {
-    title: 'Anaek Desi Log',
+    title: { default: 'Anaek Desi Log', template: '%s | Anaek Desi Log' },
     description:
       'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
     card: 'summary_large_image',
+    creator: '@sivarampg95',
   },
 }
 

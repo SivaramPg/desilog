@@ -1,8 +1,14 @@
+import { Metadata } from 'next'
+
 import DynamicGallerySection from '@/components/DynamicGallerySection'
 import OptimisedGallerySection from '@/components/OptimisedGallerySection'
 import RawGallerySection from '@/components/RawGallerySection'
 
 import { CHARACTERS_BW_COUNT } from '@/constants'
+
+export const metadata: Metadata = {
+  title: 'B/W Characters',
+}
 
 export default function Home() {
   return (

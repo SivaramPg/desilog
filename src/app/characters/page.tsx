@@ -1,8 +1,14 @@
+import { Metadata } from 'next'
+
 import DynamicGallerySection from '@/components/DynamicGallerySection'
 import OptimisedGallerySection from '@/components/OptimisedGallerySection'
 import RawGallerySection from '@/components/RawGallerySection'
 
 import { CHARACTERS_COUNT } from '@/constants'
+
+export const metadata: Metadata = {
+  title: 'Characters',
+}
 
 export default function Home() {
   return (
