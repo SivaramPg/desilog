@@ -8,6 +8,7 @@ import { useDebouncedCallback } from 'use-debounce'
 import { nanoid } from 'nanoid'
 
 import { LinkImage } from './LinkImage'
+import ApiEndpointElement from './ApiEndpointElement'
 
 interface RandomGallerySectionProps {
   className?: string
@@ -56,7 +57,7 @@ const RandomGallerySection = ({
           url={`https://desilog.sivaramp.com/r/avatars/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-3 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
               View Random Avatar
               <Image
                 src={'/icons/randomise.svg'}
@@ -76,7 +77,7 @@ const RandomGallerySection = ({
           url={`https://desilog.sivaramp.com/r/characters/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-3 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
               View Random Character
               <Image
                 src={'/icons/randomise.svg'}
@@ -96,7 +97,7 @@ const RandomGallerySection = ({
           url={`https://desilog.sivaramp.com/r/characters-bw/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-3 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
               View Random B/W Character
               <Image
                 src={'/icons/randomise.svg'}
@@ -110,7 +111,7 @@ const RandomGallerySection = ({
         />
       </section>
       <button
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 px-8 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
+        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 px-8 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95 mb-10 cursor-pointer"
         onClick={() => debounced(nanoid())}
       >
         <Image
@@ -121,8 +122,23 @@ const RandomGallerySection = ({
           className="mr-2 invert"
           fetchPriority="high"
         />
-        Randomise (1 per sec)
+        Play 😀 (1 per sec)
       </button>
+
+      <ApiEndpointElement
+        className="mb-2"
+        text={`https://desilog.sivaramp.com/r/avatars/256`}
+      />
+      <ApiEndpointElement
+        className="mb-2"
+        text={`https://desilog.sivaramp.com/r/characters/256`}
+        hideLabel
+      />
+      <ApiEndpointElement
+        className="mb-2"
+        text={`https://desilog.sivaramp.com/r/characters-bw/256`}
+        hideLabel
+      />
     </div>
   )
 }

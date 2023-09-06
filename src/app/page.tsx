@@ -15,7 +15,7 @@ export default function Home() {
 
       <RandomGallerySection
         sectionId="random"
-        sectionTitle="Kuch `Random` Desi Log"
+        sectionTitle="Kuch `Random Dynamic` Desi Log"
         galleryImageDimension={386}
       />
 
