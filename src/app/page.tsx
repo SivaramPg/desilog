@@ -61,11 +61,11 @@ export default function Home() {
         sectionTitle="Kuch `Dynamic` Desi Characters"
         galleryItemsCount={5}
         galleryItemType="characters"
-        galleryImageDimension={512}
+        galleryImageDimension={386}
       />
       <ApiEndpointElement
         className="mb-5"
-        text={`https://desilog.sivaramp.com/i/characters/1/512`}
+        text={`https://desilog.sivaramp.com/i/characters/1/386`}
       />
       <DynamicApiUrlDocs
         docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"
@@ -94,11 +94,11 @@ export default function Home() {
         sectionTitle="Kuch `Dynamic` Desi B/W Characters"
         galleryItemsCount={5}
         galleryItemType="characters-bw"
-        galleryImageDimension={512}
+        galleryImageDimension={386}
       />
       <ApiEndpointElement
         className="mb-5"
-        text={`https://desilog.sivaramp.com/i/characters-bw/1/512`}
+        text={`https://desilog.sivaramp.com/i/characters-bw/1/386`}
       />
       <DynamicApiUrlDocs
         docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"

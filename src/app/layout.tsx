@@ -10,7 +10,7 @@ import QuickLinks from '@/components/QuickLinks'
 const mulish = Mulish({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Anaek Desi Log',
+  title: { default: 'Anaek Desi Log', template: '%s | Anaek Desi Log' },
   description:
     'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
   metadataBase: new URL('https://desilog.sivaramp.com'),

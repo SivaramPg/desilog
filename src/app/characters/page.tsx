@@ -18,7 +18,7 @@ export default function Home() {
         sectionTitle="`Dynamic` Desi Characters"
         galleryItemsCount={CHARACTERS_COUNT}
         galleryItemType="characters"
-        galleryImageDimension={512}
+        galleryImageDimension={386}
       />
 
       <div className="border-b border-gray-500 my-10" />
