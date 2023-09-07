@@ -88,6 +88,19 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
             </div>
           ))}
         </div>
+        <a
+          href="https://www.producthunt.com/posts/anaek-desi-log?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-anaek&#0045;desi&#0045;log"
+          target="_blank"
+        >
+          <Image
+            unoptimized
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=413527&theme=light"
+            alt="Anaek&#0032;Desi&#0032;Log - Free&#0032;CC0&#0032;placeholder&#0032;images&#0032;&#0038;&#0032;APIs&#0032;but&#0032;in&#0032;an&#0032;Indian&#0032;Context&#0033; | Product Hunt"
+            style={{ width: 250, height: 54 }}
+            width="250"
+            height="54"
+          />
+        </a>
       </div>
     </section>
   )
