@@ -19,17 +19,38 @@ export const metadata: Metadata = {
     title: { default: 'Anaek Desi Log', template: '%s | Anaek Desi Log' },
     description:
       'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
-    type: 'website',
     siteName: 'Anaek Desi Log',
     url: 'https://desilog.sivaramp.com',
+    images: [
+      {
+        type: 'image/jepg',
+        url: '/opengraph-image.jpg',
+        width: 2400,
+        height: 1260,
+        alt: 'Anaek Desi Log',
+      },
+    ],
     locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     title: { default: 'Anaek Desi Log', template: '%s | Anaek Desi Log' },
     description:
       'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
     card: 'summary_large_image',
+    images: [
+      {
+        type: 'image/jepg',
+        url: '/opengraph-image.jpg',
+        width: 2400,
+        height: 1260,
+        alt: 'Anaek Desi Log',
+      },
+    ],
     creator: '@sivarampg95',
+  },
+  icons: {
+    icon: '/favicon.ico',
   },
 }
 
