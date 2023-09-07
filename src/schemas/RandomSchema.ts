@@ -1,3 +1,4 @@
+import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
 import { z } from 'zod'
 
 export const AssetTypeEnum = z.enum(['avatars', 'characters', 'characters-bw'])
@@ -11,13 +12,17 @@ export const RandomSchema = z
   })
   .strict()
   .refine(({ assetType, width }) => {
-    if (assetType === 'avatars') {
-      return width <= 1000
-    } else if (assetType === 'characters') {
-      return width <= 2000
-    } else if (assetType === 'characters-bw') {
-      return width <= 2000
-    }
+    switch (assetType) {
+      case AssetTypeEnum.enum.avatars:
+        return width <= MAX_AVATAR_WIDTH
 
-    return false
+      case AssetTypeEnum.enum.characters:
+        return width <= MAX_CHARACTERS_WIDTH
+
+      case AssetTypeEnum.enum['characters-bw']:
+        return width <= MAX_CHARACTERS_WIDTH
+
+      default:
+        return false
+    }
   })

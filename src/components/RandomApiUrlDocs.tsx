@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
 import { twMerge as cn } from 'tailwind-merge'
 
 interface RandomApiUrlDocsProps {
@@ -33,7 +34,8 @@ const RandomApiUrlDocs = ({
             <li className="list-disc ml-16">
               <h5 className="text-md font-medium break-words font-mono">
                 <span className="font-black font-sans">ASSET_WIDTH</span>:<br />{' '}
-                Min value 1. Max value ASSET_TYPE == 'avatars' ? 1000 : 2000
+                Min value 1. Max value ASSET_TYPE == 'avatars' ?{' '}
+                {MAX_AVATAR_WIDTH} : {MAX_CHARACTERS_WIDTH}
               </h5>
             </li>
           </ul>

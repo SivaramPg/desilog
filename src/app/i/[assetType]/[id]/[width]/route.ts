@@ -16,15 +16,22 @@ export async function GET(
   { params }: { params: Params }
 ) {
   try {
-    const { assetType, assetId, width } = await AssetSchema.parseAsync({
+    const result = AssetSchema.safeParse({
       assetType: params.assetType,
       assetId: params.id,
       width: params.width,
     })
 
+    if (!result.success) {
+      return new NextResponse('invalid params', { status: 400 })
+    }
+
+    const { assetType, assetId, width } = result.data
+
     const imgBuffer = await sharp(
-      path.resolve(
-        `./src/assets/static/${getAssetTypePath(assetType)}/${assetId}.jpg`
+      path.join(
+        process.cwd(),
+        `src/assets/static/${getAssetTypePath(assetType)}/${assetId}.jpg`
       )
     )
       .resize(width)
@@ -36,6 +43,6 @@ export async function GET(
     })
   } catch (error) {
     console.log(error)
-    return new NextResponse('invalid params', { status: 400 })
+    return new NextResponse('request failed', { status: 500 })
   }
 }

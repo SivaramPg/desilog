@@ -13,10 +13,16 @@ export async function GET(
   { params }: { params: Params }
 ) {
   try {
-    const { assetType, width } = await RandomSchema.parseAsync({
+    const result = RandomSchema.safeParse({
       assetType: params.assetType,
       width: params.width,
     })
+
+    if (!result.success) {
+      return new NextResponse('invalid params', { status: 400 })
+    }
+
+    const { assetType, width } = result.data
 
     const assetId = getRandomAssetId(assetType)
 
@@ -24,7 +30,6 @@ export async function GET(
       `https://desilog.sivaramp.com/i/${assetType}/${assetId}/${width}`
     )
   } catch (error) {
-    console.log(error)
-    return new NextResponse('invalid params', { status: 400 })
+    return new NextResponse('request failed', { status: 500 })
   }
 }

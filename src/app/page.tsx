@@ -6,6 +6,7 @@ import SpriteIcon, { Icons } from '@/components/SpriteIcon'
 import ApiEndpointElement from '@/components/ApiEndpointElement'
 import RandomGallerySection from '@/components/RandomGallerySection'
 import DynamicApiUrlDocs from '@/components/DynamicApiUrlDocs'
+import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
         docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"
         assetType="avatars"
         maxAssetId="39"
-        maxAssetWidth="1000"
+        maxAssetWidth={MAX_AVATAR_WIDTH.toString()}
         className="mb-10"
       />
       <Link
@@ -70,7 +71,7 @@ export default function Home() {
         docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"
         assetType="characters"
         maxAssetId="72"
-        maxAssetWidth="2000"
+        maxAssetWidth={MAX_CHARACTERS_WIDTH.toString()}
         className="mb-10"
       />
       <Link
@@ -103,7 +104,7 @@ export default function Home() {
         docUrl="https://<DOMAIN_NAME>/i/<ASSET_TYPE>/<ASSET_ID>/<ASSET_WIDTH>"
         assetType="characters-bw"
         maxAssetId="70"
-        maxAssetWidth="2000"
+        maxAssetWidth={MAX_CHARACTERS_WIDTH.toString()}
         className="mb-10"
       />
       <Link
