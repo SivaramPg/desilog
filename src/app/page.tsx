@@ -75,7 +75,7 @@ export default function Home() {
         className="mb-10"
       />
       <Link
-        href="/avatars"
+        href="/characters"
         className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
       >
         <SpriteIcon
@@ -108,7 +108,7 @@ export default function Home() {
         className="mb-10"
       />
       <Link
-        href="/avatars"
+        href="/characters-bw"
         className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
       >
         <SpriteIcon
