@@ -31,7 +31,7 @@ export default function Home() {
         galleryImageDimension={200}
       />
       <ApiEndpointElement
-        className="mb-5"
+        className="mb-2"
         text={`https://desilog.sivaramp.com/i/avatars/1/256`}
       />
       <DynamicApiUrlDocs
@@ -64,7 +64,7 @@ export default function Home() {
         galleryImageDimension={386}
       />
       <ApiEndpointElement
-        className="mb-5"
+        className="mb-2"
         text={`https://desilog.sivaramp.com/i/characters/1/386`}
       />
       <DynamicApiUrlDocs
@@ -97,7 +97,7 @@ export default function Home() {
         galleryImageDimension={386}
       />
       <ApiEndpointElement
-        className="mb-5"
+        className="mb-2"
         text={`https://desilog.sivaramp.com/i/characters-bw/1/386`}
       />
       <DynamicApiUrlDocs
