@@ -12,13 +12,13 @@ export default function Navbar() {
           className="inline-flex items-center justify-center gap-2 hover:drop-shadow-md duration-100"
         >
           <div className="font-bold text-2xl md:text-3xl bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
-            Anek
+            Anaek
           </div>
           <Image
             src="/icons/logo.svg"
             height={50}
             width={140}
-            alt="Anek Desi Log"
+            alt="Anaek Desi Log"
             className=""
           />
         </Link>

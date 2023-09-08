@@ -11,8 +11,8 @@ const mulish = Mulish({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Anek Desi Log - CC0 Placeholders',
-    template: '%s | Anek Desi Log - CC0 Placeholders',
+    default: 'Anaek Desi Log - CC0 Placeholders',
+    template: '%s | Anaek Desi Log - CC0 Placeholders',
   },
   description:
     'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://desilog.sivaramp.com' },
   openGraph: {
     title: {
-      default: 'Anek Desi Log - CC0 Placeholders',
-      template: '%s | Anek Desi Log - CC0 Placeholders',
+      default: 'Anaek Desi Log - CC0 Placeholders',
+      template: '%s | Anaek Desi Log - CC0 Placeholders',
     },
     description:
       'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :) Free dynamic, optimized or raw placeholder images & APIs in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
-    siteName: 'Anek Desi Log - CC0 Placeholders',
+    siteName: 'Anaek Desi Log - CC0 Placeholders',
     url: 'https://desilog.sivaramp.com',
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.jpg',
         width: 2400,
         height: 1260,
-        alt: 'Anek Desi Log - CC0 Placeholders',
+        alt: 'Anaek Desi Log - CC0 Placeholders',
       },
     ],
     locale: 'en_US',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: {
-      default: 'Anek Desi Log - CC0 Placeholders',
-      template: '%s | Anek Desi Log - CC0 Placeholders',
+      default: 'Anaek Desi Log - CC0 Placeholders',
+      template: '%s | Anaek Desi Log - CC0 Placeholders',
     },
     description:
       'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :) Free dynamic, optimized or raw placeholder images & APIs in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.jpg',
         width: 2400,
         height: 1260,
-        alt: 'Anek Desi Log - CC0 Placeholders',
+        alt: 'Anaek Desi Log - CC0 Placeholders',
       },
     ],
     creator: '@sivarampg95',

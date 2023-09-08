@@ -15,12 +15,12 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
     >
       <div className="min-h-[calc(100vh-64px)] w-full max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 py-20">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black flex items-center justify-center gap-4 bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text text-transparent flex-wrap">
-          Anek
+          Anaek
           <Image
             src="/icons/logo.svg"
             height={50}
             width={400}
-            alt="Anek Desi Log"
+            alt="Anaek Desi Log"
             className="w-48 sm:w-72 md:w-96"
           />
         </h1>
@@ -95,7 +95,7 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
           <Image
             unoptimized
             src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=413527&theme=light"
-            alt="Anek&#0032;Desi&#0032;Log - Free&#0032;CC0&#0032;placeholder&#0032;images&#0032;&#0038;&#0032;APIs&#0032;but&#0032;in&#0032;an&#0032;Indian&#0032;Context&#0033; | Product Hunt"
+            alt="Anaek&#0032;Desi&#0032;Log - Free&#0032;CC0&#0032;placeholder&#0032;images&#0032;&#0038;&#0032;APIs&#0032;but&#0032;in&#0032;an&#0032;Indian&#0032;Context&#0033; | Product Hunt"
             style={{ width: 250, height: 54 }}
             width="250"
             height="54"
