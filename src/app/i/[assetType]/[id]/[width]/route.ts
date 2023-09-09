@@ -1,4 +1,5 @@
 import path from 'path'
+import fsPromises from 'fs/promises'
 import { NextRequest, NextResponse } from 'next/server'
 import sharp from 'sharp'
 
@@ -28,12 +29,14 @@ export async function GET(
 
     const { assetType, assetId, width } = result.data
 
-    const imgBuffer = await sharp(
+    const funcStarterImage = await fsPromises.readFile(
       path.join(
         process.cwd(),
         `src/assets/func/${getAssetTypePath(assetType)}/${assetId}.jpg`
       )
     )
+
+    const imgBuffer = await sharp(funcStarterImage)
       .resize(width)
       .jpeg({ quality: 75 })
       .toBuffer()
