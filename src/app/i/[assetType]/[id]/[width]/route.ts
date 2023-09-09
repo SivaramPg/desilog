@@ -31,7 +31,7 @@ export async function GET(
     const imgBuffer = await sharp(
       path.join(
         process.cwd(),
-        `src/assets/static/${getAssetTypePath(assetType)}/${assetId}.jpg`
+        `src/assets/func/${getAssetTypePath(assetType)}/${assetId}.jpg`
       )
     )
       .resize(width)
