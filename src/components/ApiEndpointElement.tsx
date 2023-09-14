@@ -1,6 +1,6 @@
 'use client'
 
-import clsx from 'clsx'
+import { twMerge as cn } from 'tailwind-merge'
 import { useClipboard } from 'use-clipboard-copy'
 
 import SpriteIcon, { Icons } from './SpriteIcon'
@@ -26,7 +26,7 @@ const ApiEndpointElement = ({
         </h4>
       )}
       <div
-        className={clsx(
+        className={cn(
           'w-full min-h-14 flex rounded-md overflow-hidden',
           className
         )}
@@ -37,7 +37,7 @@ const ApiEndpointElement = ({
         <a
           href={text}
           target="_blank"
-          className={clsx(
+          className={cn(
             'w-20 flex items-center justify-center border border-l-0',
             'bg-slate-50'
           )}
@@ -51,7 +51,7 @@ const ApiEndpointElement = ({
         </a>
         <button
           type="button"
-          className={clsx(
+          className={cn(
             'w-32 text-white font-bold text-md md:text-lg',
             copied ? 'bg-green-600' : 'bg-blue-500'
           )}

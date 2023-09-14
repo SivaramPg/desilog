@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import { SVGProps } from 'react'
+import { twMerge as cn } from 'tailwind-merge'
 
 // keep a list of the icon ids we put in the symbol
 export enum Icons {
@@ -29,7 +29,7 @@ export default function SpriteIcon({
   ...props
 }: Omit<SVGProps<SVGSVGElement>, 'id'> & { id: Icons }) {
   return (
-    <svg {...props} className={clsx(props.className)}>
+    <svg {...props} className={cn(props.className)}>
       <use href={`/icons/sprite.svg#${id}`} />
     </svg>
   )

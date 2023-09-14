@@ -1,9 +1,15 @@
-import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
 import { z } from 'zod'
 
-export const AssetTypeEnum = z.enum(['avatars', 'characters', 'characters-bw'])
+import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
+import { AssetTypeEnum, BaseWidth } from './BaseSchemas'
 
-const BaseWidth = z.coerce.number().int().positive()
+const randomSchemaRefinementMap = {
+  [AssetTypeEnum.enum['characters-bw']]: (width: number) =>
+    width <= MAX_CHARACTERS_WIDTH,
+  [AssetTypeEnum.enum.characters]: (width: number) =>
+    width <= MAX_CHARACTERS_WIDTH,
+  [AssetTypeEnum.enum.avatars]: (width: number) => width <= MAX_AVATAR_WIDTH,
+}
 
 export const RandomSchema = z
   .object({
@@ -12,17 +18,5 @@ export const RandomSchema = z
   })
   .strict()
   .refine(({ assetType, width }) => {
-    switch (assetType) {
-      case AssetTypeEnum.enum.avatars:
-        return width <= MAX_AVATAR_WIDTH
-
-      case AssetTypeEnum.enum.characters:
-        return width <= MAX_CHARACTERS_WIDTH
-
-      case AssetTypeEnum.enum['characters-bw']:
-        return width <= MAX_CHARACTERS_WIDTH
-
-      default:
-        return false
-    }
+    return randomSchemaRefinementMap[assetType](width)
   })

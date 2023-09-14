@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import sharp from 'sharp'
 
 import { AssetSchema } from '@/schemas/AssetSchema'
-import { CDN_FRIENDLY_HEADERS, getAssetTypePath } from '@/constants'
+import { CDN_FRIENDLY_HEADERS, getAssetTypePath } from '@/utils'
 
 type Params = {
   assetType: string

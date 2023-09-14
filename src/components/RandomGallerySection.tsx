@@ -24,7 +24,7 @@ const RandomGallerySection = ({
   sectionTitle,
   galleryImageDimension,
 }: RandomGallerySectionProps): JSX.Element => {
-  const [id, setId] = useState(() => nanoid())
+  const [id, setId] = useState(() => nanoid(6))
 
   const debounced = useDebouncedCallback((value: string) => {
     setId(value)
@@ -113,7 +113,7 @@ const RandomGallerySection = ({
       </section>
       <button
         className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 px-8 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95 mb-10 cursor-pointer"
-        onClick={() => debounced(nanoid())}
+        onClick={() => debounced(nanoid(6))}
       >
         <Image
           src={'/icons/randomise.svg'}
