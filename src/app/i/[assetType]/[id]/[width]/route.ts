@@ -32,7 +32,7 @@ export async function GET(
     const funcStarterImage = await fsPromises.readFile(
       path.join(
         process.cwd(),
-        `src/assets/func/${getAssetTypePath(assetType)}/${assetId}.jpg`
+        `src/assets/static/${getAssetTypePath(assetType)}/${assetId}.jpg`
       )
     )
 
