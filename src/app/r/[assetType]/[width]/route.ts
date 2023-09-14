@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { RandomSchema } from '@/schemas/RandomSchema'
 import { getRandomAssetId } from '@/utils'
 
+export const runtime = 'edge'
+
 type Params = {
   assetType: string
   width: string
