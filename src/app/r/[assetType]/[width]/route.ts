@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 import { RandomSchema } from '@/schemas/RandomSchema'
-import { getRandomAssetId } from '@/constants'
+import { getRandomAssetId } from '@/utils'
 
 export const runtime = 'edge'
 
