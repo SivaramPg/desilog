@@ -27,9 +27,9 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
           vibrant aur black & white dono bilkul India ki tarah :)
         </h2>
         <h3 className="max-w-screen-sm mx-5 text-md sm:text-xl md:text-xl opacity-75 text-center mt-2 mb-6">
-          Free dynamic, optimized or raw placeholder images in an Indian
-          context!. Lorem Picsum but for images. All images & assets sourced
-          from our beloved{' '}
+          Free CC0 Desi/Indian placeholder APIs for dynamically sized Avatars,
+          Colourful as well as Black & White Characters!. All images & assets
+          sourced from our beloved{' '}
           <a
             href="https://desilog.in"
             target="_blank"

@@ -11,21 +11,22 @@ const mulish = Mulish({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
-    template: '%s | Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
+    default: 'Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
+    template: '%s | Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
   },
   description:
-    'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)Free dynamic, optimized or raw placeholder images in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
+    'Free CC0 Desi/Indian placeholder APIs for dynamically sized Avatars, Colourful as well as Black & White Characters!. Optimized & RAW high-quality assets also available via secure & fast CDN network. Lorem Picsum but for images. Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)',
   metadataBase: new URL('https://desilog.sivaramp.com'),
   alternates: { canonical: 'https://desilog.sivaramp.com' },
   openGraph: {
     title: {
-      default: 'Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
-      template: '%s | Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
+      default: 'Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
+      template:
+        '%s | Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
     },
     description:
-      'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :) Free dynamic, optimized or raw placeholder images & APIs in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
-    siteName: 'Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
+      'Free CC0 Desi/Indian placeholder APIs for dynamically sized Avatars, Colourful as well as Black & White Characters!. Optimized & RAW high-quality assets also available via secure & fast CDN network. Lorem Picsum but for images. Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)',
+    siteName: 'Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
     url: 'https://desilog.sivaramp.com',
     images: [
       {
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.jpg',
         width: 2400,
         height: 1260,
-        alt: 'Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
+        alt: 'Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
       },
     ],
     locale: 'en_US',
@@ -41,11 +42,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: {
-      default: 'Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
-      template: '%s | Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
+      default: 'Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
+      template:
+        '%s | Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
     },
     description:
-      'Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :) Free dynamic, optimized or raw placeholder images & APIs in an Indian context!. Lorem Picsum but for images. All images & assets sourced from our beloved desilog.in',
+      'Free CC0 Desi/Indian placeholder APIs for dynamically sized Avatars, Colourful as well as Black & White Characters!. Optimized & RAW high-quality assets also available via secure & fast CDN network. Lorem Picsum but for images. Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)',
     card: 'summary_large_image',
     images: [
       {
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.jpg',
         width: 2400,
         height: 1260,
-        alt: 'Anaek (~Anek, ~Aneeeek) Desi Log - CC0 Placeholders',
+        alt: 'Anaek Desi Log - Free CC0 Indian Placeholder APIs & Images',
       },
     ],
     creator: '@sivarampg95',
