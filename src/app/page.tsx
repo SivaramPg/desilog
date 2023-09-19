@@ -13,7 +13,7 @@ export default function Home() {
     <main className="w-full min-h-screen pb-20 bg-gradient-to-t from-blue-200 to-cyan-200">
       <HeroSection />
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <RandomGallerySection
         sectionId="random"
@@ -21,7 +21,7 @@ export default function Home() {
         galleryImageDimension={386}
       />
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <DynamicGallerySection
         sectionId="dynamic"
@@ -43,7 +43,7 @@ export default function Home() {
       />
       <Link
         href="/avatars"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
+        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded-lg w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
@@ -54,7 +54,7 @@ export default function Home() {
         View All Avatars
       </Link>
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <DynamicGallerySection
         sectionId="dynamic"
@@ -76,7 +76,7 @@ export default function Home() {
       />
       <Link
         href="/characters"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
+        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded-lg w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
@@ -87,7 +87,7 @@ export default function Home() {
         View All Characters
       </Link>
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <DynamicGallerySection
         sectionId="dynamic"
@@ -109,7 +109,7 @@ export default function Home() {
       />
       <Link
         href="/characters-bw"
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95"
+        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded-lg w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}

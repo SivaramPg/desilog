@@ -8,6 +8,8 @@ import { AVATARS_COUNT } from '@/constants'
 
 export const metadata: Metadata = {
   title: 'Avatars',
+  openGraph: { title: 'Avatars' },
+  twitter: { title: 'Avatars' },
 }
 
 export default function Home() {
@@ -21,7 +23,7 @@ export default function Home() {
         galleryImageDimension={200}
       />
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <OptimisedGallerySection
         sectionId="optimised"
@@ -30,7 +32,7 @@ export default function Home() {
         galleryItemType="avatars"
       />
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <RawGallerySection
         sectionId="raw"

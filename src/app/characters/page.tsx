@@ -8,6 +8,8 @@ import { CHARACTERS_COUNT } from '@/constants'
 
 export const metadata: Metadata = {
   title: 'Characters',
+  openGraph: { title: 'Characters' },
+  twitter: { title: 'Characters' },
 }
 
 export default function Home() {
@@ -21,7 +23,7 @@ export default function Home() {
         galleryImageDimension={386}
       />
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <OptimisedGallerySection
         sectionId="optimised"
@@ -30,7 +32,7 @@ export default function Home() {
         galleryItemType="characters/vibrant"
       />
 
-      <div className="border-b border-gray-500 my-10" />
+      <div className="my-10 border-b border-gray-500" />
 
       <RawGallerySection
         sectionId="raw"
