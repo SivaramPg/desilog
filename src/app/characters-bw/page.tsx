@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { metadata as baseMetadata } from '../layout'
 
 import DynamicGallerySection from '@/components/DynamicGallerySection'
 import OptimisedGallerySection from '@/components/OptimisedGallerySection'
@@ -8,8 +9,8 @@ import { CHARACTERS_BW_COUNT } from '@/constants'
 
 export const metadata: Metadata = {
   title: 'B/W Characters',
-  openGraph: { title: 'B/W Characters' },
-  twitter: { title: 'B/W Characters' },
+  openGraph: { ...baseMetadata.openGraph, title: 'B/W Characters' },
+  twitter: { ...baseMetadata.twitter, title: 'B/W Characters' },
 }
 
 export default function Home() {

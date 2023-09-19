@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { metadata as baseMetadata } from '../layout'
 
 import DynamicGallerySection from '@/components/DynamicGallerySection'
 import OptimisedGallerySection from '@/components/OptimisedGallerySection'
@@ -8,8 +9,8 @@ import { AVATARS_COUNT } from '@/constants'
 
 export const metadata: Metadata = {
   title: 'Avatars',
-  openGraph: { title: 'Avatars' },
-  twitter: { title: 'Avatars' },
+  openGraph: { ...baseMetadata.openGraph, title: 'Avatars' },
+  twitter: { ...baseMetadata.twitter, title: 'Avatars' },
 }
 
 export default function Home() {
