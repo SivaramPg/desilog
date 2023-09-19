@@ -5,13 +5,13 @@ import Image from 'next/image'
 
 export default function Navbar() {
   return (
-    <header className="sticky left-0 top-0 right-0 bg-white w-full h-16 shadow-md font-sans z-50">
-      <nav className="h-full container px-4 mx-auto flex items-center justify-between gap-4">
+    <header className="sticky top-0 left-0 right-0 z-50 w-full h-16 font-sans bg-white shadow-md">
+      <nav className="container flex items-center justify-between h-full px-4 mx-auto gap-4">
         <Link
           href="/"
           className="inline-flex items-center justify-center gap-2 hover:drop-shadow-md duration-100"
         >
-          <div className="font-bold text-2xl md:text-3xl bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold text-transparent md:text-3xl bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text">
             Anaek
           </div>
           <Image
@@ -22,7 +22,7 @@ export default function Navbar() {
             className=""
           />
         </Link>
-        <div className="items-center justify-center gap-2 md:gap-4 hidden sm:flex">
+        <div className="items-center justify-center hidden gap-2 md:gap-4 sm:flex">
           <CustomNavLink
             href="/avatars"
             icon={Icons.people}
@@ -65,7 +65,7 @@ const CustomNavLink = ({
           height={20}
           className="block md:hidden lg:block"
         />
-        <p className="font-bold hidden md:block">{linkText}</p>
+        <p className="hidden font-bold md:block">{linkText}</p>
       </div>
     </Link>
   )

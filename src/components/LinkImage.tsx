@@ -41,7 +41,7 @@ export function LinkImage({
 }) {
   return (
     <a href={url} target="_blank">
-      <div className="w-full aspect-square relative">
+      <div className="relative w-full aspect-square">
         <Image
           key={randomizer}
           unoptimized

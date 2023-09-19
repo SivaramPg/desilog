@@ -34,10 +34,10 @@ const RandomGallerySection = ({
     <div className={cn(className)}>
       <h2
         id={sectionId}
-        className="px-4 text-4xl sm:text-5xl lg:text-6xl font-black text-center drop-shadow-lg mb-4"
+        className="px-4 mb-4 text-4xl font-black text-center sm:text-5xl lg:text-6xl drop-shadow-lg"
       >
         <Link href={`#${sectionId}`}>
-          <span className="font-medium text-black hover:text-blue-600 duration-100 text-3xl sm:text-6xl">
+          <span className="text-3xl font-medium text-black hover:text-blue-600 duration-100 sm:text-6xl">
             #
           </span>
           &nbsp;
@@ -112,7 +112,7 @@ const RandomGallerySection = ({
         />
       </section>
       <button
-        className="w-fit font-bold text-lg sm:text-xl flex items-center gap-2 border p-3 px-8 bg-fuchsia-600 text-white rounded-lg hover:shadow-md mx-auto duration-100 active:scale-95 mb-10 cursor-pointer"
+        className="flex items-center p-3 px-8 mx-auto mb-10 text-lg font-bold text-white border rounded-lg cursor-pointer w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
         onClick={() => debounced(nanoid(6))}
       >
         <Image

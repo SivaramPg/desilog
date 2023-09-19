@@ -30,9 +30,9 @@ const QuickLinks = ({ className }: QuickLinksProps): JSX.Element => {
         <>
           <Link
             href="/"
-            className="flex flex-grow items-center justify-center gap-4"
+            className="flex items-center justify-center flex-grow gap-4"
           >
-            <span className="text-white font-bold drop-shadow-md">Home</span>
+            <span className="font-bold text-white drop-shadow-md">Home</span>
             <SpriteIcon
               id={Icons.home}
               width={28}
@@ -42,9 +42,9 @@ const QuickLinks = ({ className }: QuickLinksProps): JSX.Element => {
           </Link>
           <Link
             href="/avatars"
-            className="flex flex-grow items-center justify-center gap-4"
+            className="flex items-center justify-center flex-grow gap-4"
           >
-            <span className="text-white font-bold drop-shadow-md">Avatars</span>
+            <span className="font-bold text-white drop-shadow-md">Avatars</span>
             <SpriteIcon
               id={Icons.people}
               width={28}
@@ -54,9 +54,9 @@ const QuickLinks = ({ className }: QuickLinksProps): JSX.Element => {
           </Link>
           <Link
             href="/characters"
-            className="flex flex-grow items-center justify-center gap-4"
+            className="flex items-center justify-center flex-grow gap-4"
           >
-            <span className="text-white font-bold drop-shadow-md">
+            <span className="font-bold text-white drop-shadow-md">
               Characters
             </span>
             <SpriteIcon
@@ -68,9 +68,9 @@ const QuickLinks = ({ className }: QuickLinksProps): JSX.Element => {
           </Link>
           <Link
             href="/characters-bw"
-            className="flex flex-grow items-center justify-center gap-4"
+            className="flex items-center justify-center flex-grow gap-4"
           >
-            <span className="text-white font-bold drop-shadow-md">
+            <span className="font-bold text-white drop-shadow-md">
               B/W Characters
             </span>
             <SpriteIcon

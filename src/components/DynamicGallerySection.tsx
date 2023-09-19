@@ -26,10 +26,10 @@ const DynamicGallerySection = ({
     <div className={cn(className)}>
       <h2
         id={sectionId}
-        className="px-4 text-4xl sm:text-5xl lg:text-6xl font-black text-center drop-shadow-lg mb-4"
+        className="px-4 mb-4 text-4xl font-black text-center sm:text-5xl lg:text-6xl drop-shadow-lg"
       >
         <Link href={`#${sectionId}`}>
-          <span className="font-medium text-black hover:text-blue-600 duration-100 text-3xl sm:text-6xl">
+          <span className="text-3xl font-medium text-black hover:text-blue-600 duration-100 sm:text-6xl">
             #
           </span>
           &nbsp;

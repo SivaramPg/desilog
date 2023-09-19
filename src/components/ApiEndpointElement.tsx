@@ -19,9 +19,9 @@ const ApiEndpointElement = ({
   const { copied, copy } = useClipboard({ copiedTimeout: 1_000 })
 
   return (
-    <div className="w-full max-w-screen-md flex flex-col gap-2 mx-auto px-4">
+    <div className="flex flex-col w-full px-4 mx-auto max-w-screen-md gap-2">
       {!hideLabel && (
-        <h4 className="font-bold text-lg md:text-xl opacity-70">
+        <h4 className="text-lg font-bold md:text-xl opacity-70">
           Example API Endpoint:
         </h4>
       )}
@@ -31,7 +31,7 @@ const ApiEndpointElement = ({
           className
         )}
       >
-        <div className="w-full bg-slate-50 rounded-l-md border border-r-0 pl-4 py-2 font-bold text-md md:text-lg resize-none flex items-center break-all">
+        <div className="flex items-center w-full py-2 pl-4 font-bold break-all border border-r-0 resize-none bg-slate-50 rounded-l-md text-md md:text-lg">
           {text.replace('https://', '')}
         </div>
         <a
