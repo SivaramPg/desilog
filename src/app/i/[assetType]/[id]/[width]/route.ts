@@ -5,7 +5,7 @@ import sharp from 'sharp'
 
 import { AssetSchema } from '@/schemas/AssetSchema'
 import { CDN_FRIENDLY_HEADERS, getAssetTypePath } from '@/utils'
-import { AssetTypeEnum } from '@/schemas/BaseSchemas'
+import { AssetType } from '@/schemas/BaseSchemas'
 import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
 
 type Params = {
@@ -41,8 +41,7 @@ export async function GET(
     let imgBuffer: Buffer
 
     if (
-      (width === MAX_AVATAR_WIDTH &&
-        assetType === AssetTypeEnum.enum.avatars) ||
+      (width === MAX_AVATAR_WIDTH && assetType === 'avatars') ||
       width === MAX_CHARACTERS_WIDTH
     ) {
       imgBuffer = staticAssetBuffer

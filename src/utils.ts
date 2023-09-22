@@ -1,14 +1,11 @@
-import { z } from 'zod'
 import random from 'lodash.random'
 
-import { AssetTypeEnum } from './schemas/BaseSchemas'
+import { AssetType } from './schemas/BaseSchemas'
 import {
   AVATARS_COUNT,
   CHARACTERS_BW_COUNT,
   CHARACTERS_COUNT,
 } from './constants'
-
-type AssetType = z.infer<typeof AssetTypeEnum>
 
 export function CDN_FRIENDLY_HEADERS(
   assetType: string,
@@ -25,20 +22,20 @@ export function CDN_FRIENDLY_HEADERS(
   }
 }
 
-const assetTypeDirPathMap = {
-  [AssetTypeEnum.enum.avatars]: 'avatars',
-  [AssetTypeEnum.enum.characters]: 'characters/vibrant',
-  [AssetTypeEnum.enum['characters-bw']]: 'characters/mono',
+const assetTypeDirPathMap: Record<AssetType, string> = {
+  avatars: 'avatars',
+  characters: 'characters/vibrant',
+  'characters-bw': 'characters/mono',
 }
 
 export function getAssetTypePath(assetType: AssetType) {
   return assetTypeDirPathMap[assetType]
 }
 
-const assetTypeRandomIdFuncMap = {
-  [AssetTypeEnum.enum.avatars]: () => random(1, AVATARS_COUNT),
-  [AssetTypeEnum.enum.characters]: () => random(1, CHARACTERS_COUNT),
-  [AssetTypeEnum.enum['characters-bw']]: () => random(1, CHARACTERS_BW_COUNT),
+const assetTypeRandomIdFuncMap: Record<AssetType, () => number> = {
+  avatars: () => random(1, AVATARS_COUNT),
+  characters: () => random(1, CHARACTERS_COUNT),
+  'characters-bw': () => random(1, CHARACTERS_BW_COUNT),
 }
 
 export function getRandomAssetId(assetType: AssetType) {

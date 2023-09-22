@@ -1,17 +1,18 @@
 import { z } from 'zod'
 
 import { MAX_AVATAR_WIDTH } from '@/constants'
-import { AssetTypeEnum, BaseWidth } from './BaseSchemas'
+import { AssetType, AssetTypeSchema, BaseWidth } from './BaseSchemas'
 
-const randomSchemaRefinementMap = {
-  [AssetTypeEnum.enum.avatars]: (width: number) => width <= MAX_AVATAR_WIDTH,
-  [AssetTypeEnum.enum['characters-bw']]: (width?: number) => true,
-  [AssetTypeEnum.enum.characters]: (width?: number) => true,
-}
+const randomSchemaRefinementMap: Record<AssetType, (width: number) => boolean> =
+  {
+    avatars: (width: number) => width <= MAX_AVATAR_WIDTH,
+    characters: (width?: number) => true,
+    'characters-bw': (width?: number) => true,
+  }
 
 export const RandomSchema = z
   .object({
-    assetType: AssetTypeEnum,
+    assetType: AssetTypeSchema,
     width: BaseWidth,
   })
   .strict()

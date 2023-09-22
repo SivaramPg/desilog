@@ -1,7 +1,13 @@
-import { CHARACTERS_COUNT, MAX_CHARACTERS_WIDTH } from '@/constants'
 import { z } from 'zod'
+import { CHARACTERS_COUNT, MAX_CHARACTERS_WIDTH } from '@/constants'
 
-export const AssetTypeEnum = z.enum(['avatars', 'characters', 'characters-bw'])
+export const AssetTypeSchema = z.union([
+  z.literal('avatars'),
+  z.literal('characters'),
+  z.literal('characters-bw'),
+])
+
+export type AssetType = z.infer<typeof AssetTypeSchema>
 
 const BaseNumberSchema = z.coerce.number().int().positive()
 
