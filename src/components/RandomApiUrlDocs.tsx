@@ -38,6 +38,22 @@ const RandomApiUrlDocs = ({
                 {MAX_AVATAR_WIDTH} : {MAX_CHARACTERS_WIDTH}
               </h5>
             </li>
+            <li className="ml-16 list-disc">
+              <h5 className="font-mono font-medium break-words text-md">
+                <span className="font-sans font-black">
+                  OPTIONAL_RANDOM_STRING
+                </span>
+                :<br /> Pass a random unique string to de-duplicate{' '}
+                <span className="underline underline-offset-4">
+                  html img `src`
+                </span>{' '}
+                URL in browser context. Works without param in{' '}
+                <span className="underline underline-offset-4">
+                  `fetch` or `browser search bar`
+                </span>{' '}
+                context!
+              </h5>
+            </li>
           </ul>
         </ul>
       </div>

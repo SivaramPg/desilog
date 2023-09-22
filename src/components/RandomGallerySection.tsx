@@ -140,7 +140,7 @@ const RandomGallerySection = ({
         text={`https://desilog.sivaramp.com/r/characters-bw/256`}
         hideLabel
       />
-      <RandomApiUrlDocs docUrl="https://desilog.sivaramp.com/r/<ASSET_TYPE>/<ASSET_WIDTH>" />
+      <RandomApiUrlDocs docUrl="https://desilog.sivaramp.com/r/<ASSET_TYPE>/<ASSET_WIDTH>?<OPTIONAL_RANDOM_STRING>" />
     </div>
   )
 }
