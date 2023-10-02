@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         alt: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
       },
     ],
-    creator: '@sivarampg95',
+    creator: '@SivaramPg',
   },
   icons: {
     icon: '/favicon.ico',
