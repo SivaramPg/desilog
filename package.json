@@ -9,11 +9,9 @@
     "lint": "next lint",
     "generate:assets": "tsx scripts/generate-assets.ts",
     "rename:originals": "tsx scripts/rename-originals.ts",
-    "postbuild": "next-sitemap",
-    "postinstall": "cd node_modules/sharp && bun install"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "lodash.random": "^3.2.0",
     "nanoid": "3.3.6",
     "next": "latest",
     "react": "latest",
