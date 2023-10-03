@@ -22,6 +22,20 @@ const toBase64 = (str: string) =>
     ? Buffer.from(str).toString('base64')
     : window.btoa(str)
 
+const placeholder = `data:image/svg+xml;base64,${toBase64(
+  shimmer(400, 400)
+)}` as `data:image/${string}`
+
+const bgStyle = {
+  // https://gist.github.com/dfrankland/f6fed3e3ccc42e3de482b324126f9542
+  backgroundImage:
+    'linear-gradient(45deg, #eeeeee90 25%, transparent 25%), linear-gradient(135deg, #eeeeee90 25%, transparent 25%),linear-gradient(45deg, transparent 75%, #eeeeee90 75%),linear-gradient(135deg, transparent 75%, #eeeeee90 75%)',
+  backgroundSize: '24px 24px' /* Must be a square */,
+  backgroundPosition: '0 0, 12px 0, 12px -12px, 0px 12px',
+  // background:
+  //   'repeating-conic-gradient(#eeeeee90 0% 25%, transparent 0% 50%) 50% / 24px 24px',
+}
+
 export function LinkImage({
   className,
   index,
@@ -41,28 +55,23 @@ export function LinkImage({
 }) {
   return (
     <a href={url} target="_blank">
-      <div className="relative w-full aspect-square">
+      <div
+        className={cn(
+          'relative w-full aspect-square rounded-full overflow-hidden',
+          className
+        )}
+        style={bgStyle}
+      >
         <Image
           key={randomizer}
           unoptimized
           src={url}
           alt={`${index + 1}`}
           fill
-          className={cn('w-full aspect-square rounded-full', className)}
+          className="object-contain"
           fetchPriority={fetchPriority}
           loading={loading ?? 'lazy'}
-          placeholder={`data:image/svg+xml;base64,${toBase64(
-            shimmer(400, 400)
-          )}`}
-          style={{
-            // https://gist.github.com/dfrankland/f6fed3e3ccc42e3de482b324126f9542
-            backgroundImage:
-              'linear-gradient(45deg, #eeeeee90 25%, transparent 25%), linear-gradient(135deg, #eeeeee90 25%, transparent 25%),linear-gradient(45deg, transparent 75%, #eeeeee90 75%),linear-gradient(135deg, transparent 75%, #eeeeee90 75%)',
-            backgroundSize: '24px 24px' /* Must be a square */,
-            backgroundPosition: '0 0, 12px 0, 12px -12px, 0px 12px',
-            // background:
-            //   'repeating-conic-gradient(#eeeeee90 0% 25%, transparent 0% 50%) 50% / 24px 24px',
-          }}
+          placeholder={placeholder}
         />
         {customElement}
       </div>

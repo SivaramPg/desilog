@@ -1,11 +1,12 @@
 import Link from 'next/link'
 
 import HeroSection from '@/components/HeroSection'
-import DynamicGallerySection from '../components/DynamicGallerySection'
+import DynamicGallerySection from '@/components/DynamicGallerySection'
 import SpriteIcon, { Icons } from '@/components/SpriteIcon'
 import ApiEndpointElement from '@/components/ApiEndpointElement'
 import RandomGallerySection from '@/components/RandomGallerySection'
 import DynamicApiUrlDocs from '@/components/DynamicApiUrlDocs'
+
 import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
 
 export default function Home() {
