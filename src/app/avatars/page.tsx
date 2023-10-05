@@ -9,8 +9,20 @@ import { AVATARS_COUNT } from '@/constants'
 
 export const metadata: Metadata = {
   title: 'Avatars',
-  openGraph: { ...baseMetadata.openGraph, title: 'Avatars' },
-  twitter: { ...baseMetadata.twitter, title: 'Avatars' },
+  description:
+    'Free CC0 Desi / Indian avatar images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful avatars bilkul India ki tarah :)',
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: 'Avatars',
+    description:
+      'Free CC0 Desi / Indian avatar images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful avatars bilkul India ki tarah :)',
+  },
+  twitter: {
+    ...baseMetadata.twitter,
+    title: 'Avatars',
+    description:
+      'Free CC0 Desi / Indian avatar images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful avatars bilkul India ki tarah :)',
+  },
 }
 
 export default function Home() {

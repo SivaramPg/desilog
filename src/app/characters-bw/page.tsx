@@ -9,8 +9,20 @@ import { CHARACTERS_BW_COUNT } from '@/constants'
 
 export const metadata: Metadata = {
   title: 'B/W Characters',
-  openGraph: { ...baseMetadata.openGraph, title: 'B/W Characters' },
-  twitter: { ...baseMetadata.twitter, title: 'B/W Characters' },
+  description:
+    'Free CC0 Desi / Indian black and white character images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful black and white characters bilkul India ki tarah :)',
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: 'B/W Characters',
+    description:
+      'Free CC0 Desi / Indian black and white character images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful black and white characters bilkul India ki tarah :)',
+  },
+  twitter: {
+    ...baseMetadata.twitter,
+    title: 'B/W Characters',
+    description:
+      'Free CC0 Desi / Indian black and white character images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke black and white characters bilkul India ki tarah :)',
+  },
 }
 
 export default function Home() {
