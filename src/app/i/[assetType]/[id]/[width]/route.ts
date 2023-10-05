@@ -1,12 +1,9 @@
-import path from 'path'
-import fsPromises from 'fs/promises'
-import { NextRequest, NextResponse } from 'next/server'
+import { join } from 'path'
+import { NextResponse } from 'next/server'
 import sharp from 'sharp'
 
 import { AssetSchema } from '@/schemas/AssetSchema'
 import { CDN_FRIENDLY_HEADERS, getAssetTypePath } from '@/utils'
-import { AssetType } from '@/schemas/BaseSchemas'
-import { MAX_AVATAR_WIDTH, MAX_CHARACTERS_WIDTH } from '@/constants'
 
 type Params = {
   assetType: string
@@ -14,10 +11,7 @@ type Params = {
   width: string
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Params }
-) {
+export async function GET(_: Request, { params }: { params: Params }) {
   try {
     const result = await AssetSchema.safeParseAsync({
       assetType: params.assetType,
@@ -31,26 +25,15 @@ export async function GET(
 
     const { assetType, assetId, width } = result.data
 
-    const staticAssetBuffer = await fsPromises.readFile(
-      path.join(
+    const imgBuffer = await sharp(
+      join(
         process.cwd(),
         `src/assets/static/${getAssetTypePath(assetType)}/${assetId}.jpg`
       )
     )
-
-    let imgBuffer: Buffer
-
-    if (
-      (width === MAX_AVATAR_WIDTH && assetType === 'avatars') ||
-      width === MAX_CHARACTERS_WIDTH
-    ) {
-      imgBuffer = staticAssetBuffer
-    } else {
-      imgBuffer = await sharp(staticAssetBuffer)
-        .resize(width)
-        .jpeg({ quality: 75 })
-        .toBuffer()
-    }
+      .resize(width)
+      .jpeg({ quality: 75 })
+      .toBuffer()
 
     return new NextResponse(imgBuffer, {
       headers: CDN_FRIENDLY_HEADERS(
@@ -61,7 +44,6 @@ export async function GET(
       ),
     })
   } catch (error) {
-    console.log(error)
     return new NextResponse('request failed', { status: 500 })
   }
 }

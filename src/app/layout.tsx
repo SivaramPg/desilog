@@ -32,8 +32,8 @@ export const metadata: Metadata = {
       {
         type: 'image/jepg',
         url: '/opengraph-image.jpg',
-        width: 2400,
-        height: 1260,
+        width: 1200,
+        height: 630,
         alt: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
       },
     ],
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
       {
         type: 'image/jepg',
         url: '/opengraph-image.jpg',
-        width: 2400,
-        height: 1260,
+        width: 1200,
+        height: 630,
         alt: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
       },
     ],

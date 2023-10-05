@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 
 import { RandomSchema } from '@/schemas/RandomSchema'
 import { getRandomAssetId } from '@/utils'
@@ -10,10 +10,7 @@ type Params = {
   width: string
 }
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Params }
-) {
+export async function GET(request: Request, { params }: { params: Params }) {
   try {
     const result = await RandomSchema.safeParseAsync({
       assetType: params.assetType,
@@ -28,7 +25,7 @@ export async function GET(
     const assetId = getRandomAssetId(assetType)
 
     return NextResponse.redirect(
-      `${request.nextUrl.origin}/i/${assetType}/${assetId}/${width}`
+      new URL(`/i/${assetType}/${assetId}/${width}`, request.url)
     )
   } catch (error) {
     return new NextResponse('request failed', { status: 500 })

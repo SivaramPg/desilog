@@ -9,8 +9,20 @@ import { CHARACTERS_COUNT } from '@/constants'
 
 export const metadata: Metadata = {
   title: 'Characters',
-  openGraph: { ...baseMetadata.openGraph, title: 'Characters' },
-  twitter: { ...baseMetadata.twitter, title: 'Characters' },
+  description:
+    'Free CC0 Desi / Indian character images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful characters bilkul India ki tarah :)',
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: 'Characters',
+    description:
+      'Free CC0 Desi / Indian character images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful characters bilkul India ki tarah :)',
+  },
+  twitter: {
+    ...baseMetadata.twitter,
+    title: 'Characters',
+    description:
+      'Free CC0 Desi / Indian character images & dynamic size placeholder APIs. Lorem Picsum but for images. Desi logon ke colourful characters bilkul India ki tarah :)',
+  },
 }
 
 export default function Home() {

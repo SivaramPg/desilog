@@ -1,5 +1,3 @@
-import random from 'lodash.random'
-
 import { AssetType } from './schemas/BaseSchemas'
 import {
   AVATARS_COUNT,
@@ -30,6 +28,10 @@ const assetTypeDirPathMap: Record<AssetType, string> = {
 
 export function getAssetTypePath(assetType: AssetType) {
   return assetTypeDirPathMap[assetType]
+}
+
+export function random(min: number, max: number) {
+  return Math.round((max - min) * Math.random()) + min
 }
 
 const assetTypeRandomIdFuncMap: Record<AssetType, () => number> = {
