@@ -9,7 +9,8 @@
     "lint": "next lint",
     "generate:assets": "tsx scripts/generate-assets.ts",
     "rename:originals": "tsx scripts/rename-originals.ts",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "postinstall": "npm rebuild --verbose sharp"
   },
   "dependencies": {
     "nanoid": "3.3.6",
