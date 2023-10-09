@@ -35,5 +35,8 @@
     "tailwindcss": "3.3.3",
     "tsx": "^3.12.7",
     "typescript": "5.2.2"
-  }
+  },
+  "trustedDependencies": [
+    "sharp"
+  ]
 }
