@@ -1,7 +1,7 @@
 {
   "functions": {
     "src/app/i/[assetType]/[id]/[width]/route.ts": {
-      "memory": 512,
+      "memory": 1024,
       "maxDuration": 10
     },
     "src/app/r/[assetType]/[width]/route.ts": {
