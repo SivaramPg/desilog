@@ -13,7 +13,7 @@ type Params = {
 
 export async function GET(_: Request, { params }: { params: Params }) {
   try {
-    const result = await AssetSchema.safeParseAsync({
+    const result = AssetSchema.safeParse({
       assetType: params.assetType,
       assetId: params.id,
       width: params.width,

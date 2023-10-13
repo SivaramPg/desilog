@@ -10,9 +10,9 @@ type Params = {
   width: string
 }
 
-export async function GET(request: Request, { params }: { params: Params }) {
+export function GET(request: Request, { params }: { params: Params }) {
   try {
-    const result = await RandomSchema.safeParseAsync({
+    const result = RandomSchema.safeParse({
       assetType: params.assetType,
       width: params.width,
     })
