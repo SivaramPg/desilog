@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen py-20 bg-gradient-to-t from-blue-200 to-cyan-200">
+    <main className="min-h-screen w-full bg-gradient-to-t from-blue-200 to-cyan-200 py-20">
       <DynamicGallerySection
         sectionId="dynamic"
         sectionTitle="`Dynamic` Desi Avatars"
