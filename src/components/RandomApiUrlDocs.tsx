@@ -13,7 +13,7 @@ const RandomApiUrlDocs = ({
 }: RandomApiUrlDocsProps): JSX.Element => {
   return (
     <div className={cn('w-full max-w-screen-md mx-auto', className)}>
-      <div className="flex flex-col px-8 py-4 mx-4 gap-4 bg-gray-50 rounded-xl">
+      <div className="flex flex-col px-8 py-4 mx-4 gap-4 bg-gray-50 rounded">
         <h4 className="text-xl font-black underline uppercase underline-offset-4">
           Usage:
         </h4>

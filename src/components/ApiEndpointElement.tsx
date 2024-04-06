@@ -27,11 +27,11 @@ const ApiEndpointElement = ({
       )}
       <div
         className={cn(
-          'w-full min-h-14 flex rounded-md overflow-hidden',
+          'w-full min-h-14 flex rounded overflow-hidden',
           className
         )}
       >
-        <div className="flex items-center w-full py-2 pl-4 font-bold break-all border border-r-0 resize-none bg-slate-50 rounded-l-md text-md md:text-lg">
+        <div className="flex items-center w-full py-2 pl-4 font-bold break-all border border-r-0 resize-none bg-slate-50 rounded-l text-md md:text-lg">
           {text.replace('https://', '')}
         </div>
         <a

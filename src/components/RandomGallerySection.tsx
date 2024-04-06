@@ -46,19 +46,19 @@ const RandomGallerySection = ({
       </h2>
       <section
         className={cn(
-          ' mx-auto grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 gap-4 py-10 px-4',
+          ' mx-auto grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 gap-2 py-10 px-4',
           'max-w-screen-lg'
         )}
       >
         <LinkImage
           key={`avatar-${id}`}
           className={cn(
-            'rounded-xl shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200'
+            'rounded shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200'
           )}
           url={`https://desilog.sivaramp.com/r/avatars/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
               View
               <Image
                 src={'/icons/randomise.svg'}
@@ -73,12 +73,12 @@ const RandomGallerySection = ({
         <LinkImage
           key={`character-${id}`}
           className={cn(
-            'rounded-xl shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200'
+            'rounded shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200'
           )}
           url={`https://desilog.sivaramp.com/r/characters/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
               View
               <Image
                 src={'/icons/randomise.svg'}
@@ -93,12 +93,12 @@ const RandomGallerySection = ({
         <LinkImage
           key={`character-bw-${id}`}
           className={cn(
-            'rounded-xl shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200'
+            'rounded shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200'
           )}
           url={`https://desilog.sivaramp.com/r/characters-bw/${galleryImageDimension}?${id}`}
           index={1}
           customElement={
-            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded-2xl absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
+            <div className="w-fit text-black bg-fuchsia-200 px-4 py-1 rounded absolute bottom-5 right-[50%] translate-x-[50%] flex items-center justify-center gap-1 font-bold shadow-lg whitespace-nowrap">
               View
               <Image
                 src={'/icons/randomise.svg'}
@@ -112,7 +112,7 @@ const RandomGallerySection = ({
         />
       </section>
       <button
-        className="flex items-center p-3 px-8 mx-auto mb-10 text-lg font-bold text-white border rounded-lg cursor-pointer w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
+        className="flex items-center p-3 px-8 mx-auto mb-10 text-lg font-bold text-white border rounded cursor-pointer w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
         onClick={() => debounced(nanoid(6))}
       >
         <Image
@@ -123,7 +123,7 @@ const RandomGallerySection = ({
           className="mr-2 invert"
           fetchPriority="high"
         />
-        Play 😀 (1 per sec)
+        Play 😀
       </button>
 
       <ApiEndpointElement

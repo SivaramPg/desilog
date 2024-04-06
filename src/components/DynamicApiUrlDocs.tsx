@@ -18,7 +18,7 @@ const DynamicApiUrlDocs = ({
 }: DynamicApiUrlDocsProps): JSX.Element => {
   return (
     <div className={cn('w-full max-w-screen-md mx-auto', className)}>
-      <div className="flex flex-col px-6 py-4 mx-4 bg-gray-50 rounded-xl gap-4">
+      <div className="flex flex-col px-6 py-4 mx-4 bg-gray-50 rounded gap-4">
         <h4 className="text-xl font-black underline uppercase underline-offset-4">
           Usage:
         </h4>

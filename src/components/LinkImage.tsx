@@ -57,7 +57,7 @@ export function LinkImage({
     <a href={url} target="_blank">
       <div
         className={cn(
-          'relative w-full aspect-square rounded-full overflow-hidden',
+          'relative w-full aspect-square rounded overflow-hidden',
           className
         )}
         style={bgStyle}
