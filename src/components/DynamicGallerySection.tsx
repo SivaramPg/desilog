@@ -38,16 +38,15 @@ const DynamicGallerySection = ({
       </h2>
       <section
         className={cn(
-          ' mx-auto grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-10 px-4',
-          galleryItemType === 'avatars' ? 'max-w-screen-sm' : 'max-w-screen-md'
+          'mx-auto grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 py-10 px-4',
+          'max-w-screen-lg'
         )}
       >
         {new Array(galleryItemsCount).fill(0).map((_, i) => (
           <LinkImage
             key={i}
             className={cn(
-              'shadow-xl border hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200',
-              galleryItemType === 'avatars' ? '' : 'rounded-3xl'
+              'rounded border hover:border-4 hover:border-fuchsia-500 duration-200'
             )}
             url={`https://desilog.sivaramp.com/i/${galleryItemType}/${
               i + 1
@@ -58,7 +57,7 @@ const DynamicGallerySection = ({
                 className={cn(
                   'absolute w-3 h-3',
                   galleryItemType === 'avatars'
-                    ? 'top-[2px] right-[2px]'
+                    ? 'top-[8px] right-[8px]'
                     : 'top-3 right-3'
                 )}
               />

@@ -4,6 +4,19 @@ import Image from 'next/image'
 import SpriteIcon, { Icons } from '@/components/SpriteIcon'
 import { LinkImage } from './LinkImage'
 
+const baseUrl = 'https://desilog.sivaramp.com/i'
+
+const arr = new Array(6).fill(0)
+
+const links = [
+  ...arr.map((_, i) => `${baseUrl}/characters/${i + 1}/128`),
+  ...arr.map((_, i) => `${baseUrl}/avatars/${i + 1}/128`),
+  ...arr.map((_, i) => `${baseUrl}/characters-bw/${i + 1}/128`),
+]
+  .map((value) => ({ value, sort: Math.random() }))
+  .sort((a, b) => a.sort - b.sort)
+  .map(({ value }) => value)
+
 interface HeroSectionProps {
   className?: string
 }
@@ -13,12 +26,12 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
     <section className={cn('w-full min-h-[calc(100vh-64px)] px-4', className)}>
       <div className="min-h-[calc(100vh-64px)] w-full max-w-screen-md mx-auto flex flex-col items-center justify-center gap-4 py-20">
         <h1 className="flex flex-wrap items-center justify-center text-5xl font-black text-transparent sm:text-6xl md:text-7xl lg:text-8xl gap-4 bg-gradient-to-l from-fuchsia-500 to-pink-500 bg-clip-text">
-          Anaek
+          Anek
           <Image
             src="/icons/logo.svg"
             height={50}
             width={400}
-            alt="Anaek Desi Log"
+            alt="Anek Desi Log"
             className="w-48 sm:w-72 md:w-96"
           />
         </h1>
@@ -36,7 +49,7 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
             className="font-bold underline underline-offset-2"
           >
             desilog.in
-          </a>{' '}
+          </a>
           &nbsp;
           <SpriteIcon
             id={Icons['heart']}
@@ -45,60 +58,19 @@ const HeroSection = ({ className }: HeroSectionProps): JSX.Element => {
             className="inline-block"
           />
         </h3>
-        <div className="flex flex-wrap items-center justify-center w-full p-2 max-w-screen-sm gap-4">
-          {new Array(5).fill(0).map((_, i) => (
+        <div className="flex flex-wrap items-center justify-center w-full p-2 max-w-screen-sm gap-2">
+          {links.map((link, i) => (
             <div key={i} className="relative w-24 shrink aspect-square">
               <LinkImage
-                className="border shadow-xl hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
+                className="rounded border shadow-xl hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
                 index={i + 1}
-                url={`https://desilog.sivaramp.com/i/avatars/${
-                  (i + 1) * 3
-                }/128`}
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
-          ))}
-          {new Array(5).fill(0).map((_, i) => (
-            <div key={i} className="relative w-24 shrink aspect-square">
-              <LinkImage
-                className="border shadow-xl hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
-                index={i + 1}
-                url={`https://desilog.sivaramp.com/i/characters/${
-                  (i + 1) * 3
-                }/128`}
-                fetchPriority="high"
-                loading="eager"
-              />
-            </div>
-          ))}
-          {new Array(5).fill(0).map((_, i) => (
-            <div key={i} className="relative w-24 shrink aspect-square">
-              <LinkImage
-                className="border shadow-xl hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
-                index={i + 1}
-                url={`https://desilog.sivaramp.com/i/characters-bw/${
-                  (i + 1) * 3
-                }/128`}
+                url={link}
                 fetchPriority="high"
                 loading="eager"
               />
             </div>
           ))}
         </div>
-        <a
-          href="https://www.producthunt.com/posts/anaek-desi-log?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-anaek&#0045;desi&#0045;log"
-          target="_blank"
-        >
-          <Image
-            unoptimized
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=413527&theme=light"
-            alt="Anaek&#0032;Desi&#0032;Log - Free&#0032;CC0&#0032;placeholder&#0032;images&#0032;&#0038;&#0032;APIs&#0032;but&#0032;in&#0032;an&#0032;Indian&#0032;Context&#0033; | Product Hunt"
-            style={{ width: 250, height: 54 }}
-            width="250"
-            height="54"
-          />
-        </a>
       </div>
     </section>
   )
