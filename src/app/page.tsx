@@ -44,7 +44,7 @@ export default function Home() {
       />
       <Link
         href="/avatars"
-        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded-lg w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
+        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
@@ -77,7 +77,7 @@ export default function Home() {
       />
       <Link
         href="/characters"
-        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded-lg w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
+        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
@@ -110,7 +110,7 @@ export default function Home() {
       />
       <Link
         href="/characters-bw"
-        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded-lg w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
+        className="flex items-center p-3 mx-auto text-lg font-bold text-white border rounded w-fit sm:text-xl gap-2 bg-fuchsia-600 hover:shadow-md duration-100 active:scale-95"
       >
         <SpriteIcon
           id={Icons['eye-open']}
