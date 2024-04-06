@@ -11,8 +11,8 @@ const mulish = Mulish({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
-    template: '%s | Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+    default: 'Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+    template: '%s | Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
   },
   description:
     'Free CC0 Desi / Indian placeholder image APIs for dynamically sized Avatars, Colourful as well as Black & White Characters!. Optimized & RAW high-quality assets also available via secure & fast CDN network. Lorem Picsum but for images. Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)',
@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://desilog.sivaramp.com' },
   openGraph: {
     title: {
-      default: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+      default: 'Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
       template:
-        '%s | Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+        '%s | Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
     },
     description:
       'Free CC0 Desi / Indian placeholder image APIs for dynamically sized Avatars, Colourful as well as Black & White Characters!. Optimized & RAW high-quality assets also available via secure & fast CDN network. Lorem Picsum but for images. Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)',
-    siteName: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+    siteName: 'Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
     url: 'https://desilog.sivaramp.com',
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+        alt: 'Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
       },
     ],
     locale: 'en_US',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: {
-      default: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+      default: 'Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
       template:
-        '%s | Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+        '%s | Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
     },
     description:
       'Free CC0 Desi / Indian placeholder image APIs for dynamically sized Avatars, Colourful as well as Black & White Characters!. Optimized & RAW high-quality assets also available via secure & fast CDN network. Lorem Picsum but for images. Desi logon ke colourful avatar aur characters vibrant aur black & white dono bilkul India ki tarah :)',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Anaek Desi Log - Free CC0 Indian Placeholder Images & APIs',
+        alt: 'Anek Desi Log - Free CC0 Indian Placeholder Images & APIs',
       },
     ],
     creator: '@SivaramPg',

@@ -47,11 +47,11 @@ const OptimisedGallerySection = ({
         setExtension={setExtension}
       />
 
-      <section className="px-4 py-10 mx-auto max-w-screen-lg grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <section className="px-4 py-10 mx-auto max-w-screen-xl grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
         {new Array(galleryItemsCount).fill(0).map((_, i) => (
           <LinkImage
             key={i + '.' + extension}
-            className="border shadow-xl rounded-xl hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
+            className="border rounded hover:border-4 hover:border-fuchsia-500 duration-200"
             index={i}
             url={`https://desilog.sivaramp.com/static/${galleryItemType}/${
               i + 1

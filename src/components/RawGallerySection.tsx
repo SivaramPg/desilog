@@ -47,11 +47,11 @@ const RawGallerySection = ({
         setExtension={setExtension}
       />
 
-      <section className="px-4 py-10 mx-auto max-w-screen-2xl grid grid-flow-row-dense grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="px-4 py-10 mx-auto max-w-screen-2xl grid grid-flow-row-dense grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
         {new Array(galleryItemsCount).fill(0).map((_, i) => (
           <LinkImage
             key={i + '.' + extension}
-            className="object-contain border rounded shadow-xl hover:shadow-2xl hover:border-4 hover:border-fuchsia-500 duration-200"
+            className="object-contain border rounded hover:border-4 hover:border-fuchsia-500 duration-200"
             url={`https://desilog.sivaramp.com/raw/${galleryItemType}/${
               i + 1
             }.${extension}`}
