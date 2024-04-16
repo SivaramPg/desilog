@@ -1,10 +1,10 @@
-import { z } from 'zod'
-import { CHARACTERS_COUNT, MAX_CHARACTERS_WIDTH } from '@/constants'
+import { CHARACTERS_COUNT, MAX_CHARACTERS_WIDTH } from "@/constants"
+import { z } from "zod"
 
 export const AssetTypeSchema = z.union([
-  z.literal('avatars'),
-  z.literal('characters'),
-  z.literal('characters-bw'),
+	z.literal("avatars"),
+	z.literal("characters"),
+	z.literal("characters-bw"),
 ])
 
 export type AssetType = z.infer<typeof AssetTypeSchema>
