@@ -1,39 +1,51 @@
 {
-  "name": "desilog",
-  "version": "2.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "generate:assets": "tsx scripts/generate-assets.ts",
-    "rename:originals": "tsx scripts/rename-originals.ts",
-    "postbuild": "next-sitemap"
-  },
-  "dependencies": {
-    "nanoid": "5.0.4",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "sharp": "0.33.3",
-    "tailwind-merge": "^2.2.2",
-    "twin.macro": "^3.4.1",
-    "use-clipboard-copy": "^0.2.0",
-    "use-debounce": "^10.0.0",
-    "zod": "^3.22.4"
-  },
-  "devDependencies": {
-    "@types/node": "20.12.5",
-    "@types/react": "18.2.74",
-    "@types/react-dom": "18.2.24",
-    "autoprefixer": "10.4.19",
-    "eslint": "9.0.0",
-    "eslint-config-next": "latest",
-    "next-sitemap": "^4.2.3",
-    "postcss": "8.4.38",
-    "tailwindcss": "3.4.3",
-    "tsx": "^4.7.2",
-    "typescript": "5.4.4"
-  }
+	"name": "desilog",
+	"version": "2.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"generate:assets": "bun run scripts/generate-assets.ts",
+		"rename:originals": "bun run scripts/rename-originals.ts",
+		"postbuild": "next-sitemap",
+		"prepare": "husky"
+	},
+	"dependencies": {
+		"@biomejs/biome": "^1.6.4",
+		"clsx": "^2.1.0",
+		"nanoid": "5.0.7",
+		"next": "latest",
+		"next-themes": "^0.3.0",
+		"react": "latest",
+		"react-dom": "latest",
+		"sharp": "0.33.3",
+		"tailwind-merge": "^2.2.2",
+		"twin.macro": "^3.4.1",
+		"use-clipboard-copy": "^0.2.0",
+		"use-debounce": "^10.0.0",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@types/node": "20.12.5",
+		"@types/react": "18.2.74",
+		"@types/react-dom": "18.2.24",
+		"autoprefixer": "10.4.19",
+		"eslint": "9.0.0",
+		"eslint-config-next": "latest",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"next-sitemap": "^4.2.3",
+		"postcss": "8.4.38",
+		"tailwindcss": "3.4.3",
+		"typescript": "5.4.5"
+	},
+	"lint-staged": {
+		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+			"biome check --apply --no-errors-on-unmatched",
+			"biome format --write --no-errors-on-unmatched",
+			"biome lint --apply --no-errors-on-unmatched"
+		]
+	}
 }
