@@ -1,6 +1,10 @@
-/** @type {import('next').NextConfig} */
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
 	output: "standalone",
 }
 
-module.exports = nextConfig
+export default nextConfig
